@@ -165,21 +165,22 @@ Tableau 4.1 : Les différents signaux générés par le contrôleur de SHA-256 
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|}
 \hline & État 0 & État 1 & État 2 & État 3 & État 4 & État 5 \\
-\hlineStart\_count & 0 & 1 & 0 & 0 & 0 & 0 \\
-\hlinerst\_count & 0 & 0 & 0 & 0 & 1 & 0 \\
-\hlinesel\_init & 0 & 0 & 0 & 0 & 1 & X \\
-\hlinesel\_Expender & 0 & 0 & 0 & 1 & 0 & X \\
-\hlinesel\_Compressor & 0 & 0 & 1 & 1 & 0 & X \\
-\hlinesel\_mux\_out & 0 & 0 & 0 & 0 & 0 & X \\
-\hlineena\_init & 0 & 1 & 1 & 1 & 0 & X \\
-\hlineena\_out & 0 & 0 & 0 & 0 & 1 & 0 \\
-\hlineena\_ready & 1 & 1 & 0 & 0 & 0 & X \\
-\hlineena\_Compress-Reg & 0 & 0 & 1 & 1 & 1 & X \\
-\hlineready\_tmp & 0 & 0 & 0 & 0 & 0 & 1 \\
-\hline\end{tabular}
-\caption{Table extracted}
+\hline Start\_count & 0 & 1 & 0 & 0 & 0 & 0 \\
+\hline rst\_count & 0 & 0 & 0 & 0 & 1 & 0 \\
+\hline sel\_init & 0 & 0 & 0 & 0 & 1 & X \\
+\hline sel\_Expender & 0 & 0 & 0 & 1 & 0 & X \\
+\hline sel\_Compressor & 0 & 0 & 1 & 1 & 0 & X \\
+\hline sel\_mux\_out & 0 & 0 & 0 & 0 & 0 & X \\
+\hline ena\_init & 0 & 1 & 1 & 1 & 0 & X \\
+\hline ena\_out & 0 & 0 & 0 & 0 & 1 & 0 \\
+\hline ena\_ready & 1 & 1 & 0 & 0 & 0 & X \\
+\hline ena\_Compress-Reg & 0 & 0 & 1 & 1 & 1 & X \\
+\hline ready\_tmp & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hline
+\end{tabular}
+\caption{Les différents signaux générés par le contrôleur de SHA-256 Seul Block}
 \end{table}
 \begin{figure}[h]
 \centering
