@@ -1,0 +1,348 @@
+
+\chapter{Chapitre 2}
+
+\textbf{\Large Sécurité de réseau VANET}
+
+
+\subsection{Introduction}
+  L’amélioration des communications VANET/DSRC nécessite des approches de sécurités. Les propriétaires de plusieurs applications de type vital ont des droits critiques pour la sécurité. Cela signifie que dans la mesure du possible, les services de sécurité doivent respecter ce droit et en même temps ne deviendra pas personnel.
+
+
+\subsection{Le profil de sécurité IEEE 1609.2}
+  Le profil de sécurité IEEE 1609.2 appelante une description compacte de la transformation de sécurité qu’une entité peut réaliser. Il est destiné à être utilisé par des organisations qui produisent des spécifications d’applications qui utilisent d’accès sans fil dans les environnements véhiculaires (DSRC/WAVE). Il fournit un modèle de services de sécurité standard et spécifie le traitement nécessaire pour sécuriser une application donnée. Le profil de sécurité IEEE 1609.2 spécifie les services de sécurité WAVE et donne des instructions pour définir les valeurs des paramètres de ces primitives.
+
+Le profil de sécurité IEEE 1609.2 contient quatre sections :
+
+Identification de profil de sécurité IEEE 1609.2 : décris le profil de sécurité IEEE 1609.2.
+
+Envoi : décris les options à définir lors de la création de données sécurisées pour l’envoi.
+
+Réception : décris les options à définir lors du traitement de données sécurisé reçu.
+
+Gestion de la sécurité : décris les contraintes sur les certificats de communication à utiliser.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image14.emf}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 2.1 : Cadre de confiance dans la livraison des messages dans VANET
+
+Les messages qui sont circulent dans les réseaux VANETs nécessite des règles de sécurités pour assurer la confiance dans la livraison des messages.
+
+Services de sécurités
+
+Les objectifs d’un système de sécurité sont appelés services de sécurité (Security services).
+
+1. Confidentiality : L’information est gardée secrète de toutes les parties, sauf qui est autorisé.
+
+2. Intégrité (Integrity) : S’assure qu’un message n’a pas été modifié en transit.
+
+3. Authentification de Message : l’authentification de l’origine des données. Veiller à ce que l’expéditeur d’un message soit authentique.
+
+4. La non-répudiation (Non-repudiation) : Veiller à ce que l’expéditeur d’un message ne puisse pas nier la création du message.
+
+5. Identification/entity authentication : L’établissement et la vérification de l’identité d’une entité; par exemple, un véhicule, un ordinateur, ou une carte de crédit.
+
+6. Contrôle d’accès (Access control) : Restriction de l’accès aux ressources, l’accès est permis que pour des entités privilégiées.
+
+7. Disponibilité (Availability) : Le système électronique est faiblement disponible.
+
+8.Audit (Auditing) : Fournir des preuves sur les activités de la sécurité pertinentes, par exemple, parla conservation des journaux de certains évènements.
+
+9. La sécurité physique (Physical security) : Offrant une protection contre les intrusions et/ou des réponses à toute tentative de violation.
+
+10. Anonymat (Anonymity) : Protection contre la découverte et l’abusive de l’identité d’utilisation.
+
+Elliptic Curve Digital Signature Algorithm (ECDSA) utilisé dans l’authentification des messages BSM
+
+  La norme IEEE 1609.2 prend en charge l’algorithme cryptographique ECDSA (Elliptic Curve Digital Signature Algorithm) qui été spécifié dans FIPS (Federal Information Processing Standard) 186-3. ECDSA est standardisé dans la norme IEEE Std1363-2000 et acceptée comme un algorithme qui peut être utilisé par des dispositifs conformes à la norme FIPS140.Par rapport aux tout autres algorithmes normalisés, il offre des petites tailles pour ces clés et signatures. Le Norme IEEE 1609.2a choisi ECDSA principalement à cause de petites tailles de ces clés et signatures.
+
+Définition de signature numérique
+
+  La signature numérique ou électronique est une donnée sous forme électronique qui est jointe ou liée logiquement à d’autres données électroniques et qui sert de méthode d’authentification. 
+
+Une signature numérique est satisfaite aux exigences suivantes :
+
+a) être liée uniquement au signataire ;
+
+b) permettre d’identifier le signataire ;
+
+c) être créée par des moyens que le signataire puisse garder sous son contrôle exclusif ;
+
+d) être liée aux données auxquelles elle se rapporte de telle sorte que toute modification ultérieure des données soit détectable.
+
+Principle de signature numérique
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image15.jpeg}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 2.2: Application de hash algorithme dans la signature numérique
+
+Préparation du message signé :
+
+L’émetteur prépare le message signé, pour cela :
+
+Il produit un condensat du message par la fonction de hachage choisie H (M) ; exemple : SHA-256, SHA-224…
+
+Il chiffre ce condensat grâce à la fonction de chiffrement C en utilisant sa clé privée Kpr. Le résultat obtenu est la signature du message : SM = C (Kpr, H [M]) ;
+
+Il prépare le message signé en plaçant le message en clair M et la signature SM dans un conteneur quelconque : Msigné=(SM, M).
+
+L’émetteur transmet Msigné, le message signé, au récepteur par un canal non sécurisé (dans notre cas le canal est le DSRC/WAVE).
+
+Réception du message signé :
+
+      Le récepteur réceptionne le message signé, pour vérifier l’authenticité du message :
+
+Il produit un condensat du texte clair en utilisant la fonction de hachage convenue : H (M) ;
+
+Il déchiffre la signature en utilisant la fonction de déchiffrement D avec la clé publique Kpb soit : DSm=D(Kpb,SM) ;
+
+Il compare DSm avec H (M).
+
+Dans le cas où la signature est authentique, DSm avec H (M) sont égaux, car par les propriétés du chiffrement asymétrique : 
+
+DSm=D (Kpb, SM)=D (Kpb, C [Kpr, H [M]])=H (M), le message est alors authentifié.
+
+Même si les fonctions de hachage ont de nombreuses applications dans la cryptographie moderne, ils sont mieux connus dans la pratique par son rôle important qu’ils jouent dans les signatures numériques.
+
+Les algorithmes de hachage sécurisé
+
+Définition des algorithmes de hachage sécurisé
+
+  Les algorithmes de hachages sécurisés (SHA) sont des standards spécifiés comme SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224 et SHA-512/256. Tous ces algorithmes sont itératifs, et qui peuvent traiter un message par une fonction de Hachage a un seul chemin (one-way hash), et de produire une représentation condensée appelée message « digest » ou « condensat » de ce message.
+
+  Quand un algorithme de hachage sécurisé est utilisé en conjonction avec un autre algorithme, il peut y avoir des exigences spécifiées ailleurs qui nécessitent l’utilisation d’un algorithme de hachage sécurisé avec un certain nombre de bits de la sécurité (par exemple, SHA-256).
+
+Les exigences de sécurité des fonctions de hachage
+
+  Contrairement à tous les autres algorithmes de chiffrement, les fonctions de hachage n’ont pas des clés. La question est maintenant de savoir s’il y a des propriétés particulières nécessaires pour une fonction de hachage pour être « sécurisé ». En fait, nous avons à nous demander si les fonctions de hachage ont un impact sur la sécurité d’une application, car ils ne cryptent pas et qu’ils n’ont pas des clés. Comme c’est souvent le cas de la cryptographie, les choses peuvent être difficiles et il y a des attaques qui utilisent les faiblesses des fonctions de hachage. Il s’avère qu’il y a trois propriétés centrales, qui les fonctions de hachage doivent posséder pour être sures.
+
+Ces algorithmes permettent la détermination de l’intégrité d’un message : tout changement au message entrainer un message différent d’empreint (message digest) avec une très forte probabilité. Cette propriété est utile dans la génération et la vérification de signatures numériques et des codes d’authentification de message, et à la génération de nombres aléatoires ou bits. Les trois propriétés de sécurité des fonctions de hachage sont :
+
+•Preimage resistance (résistance antécédente) : Pour une sortie z donnée, il est impossible de trouver une entrée x de telle sorte que H (x)= z, c’est à dire, H (x) est unidirectionnel. •Second preimage resistance (résistance aux secondes antécédentes) : Compte tenu de x1, et donc H (x1), il est mathématiquement infaisable de trouver une x2 telle que H (x1) = H (x 2).•Collision resistance (résistance aux collisions) : Il est mathématiquement impossible de trouver des paires x1≠ x2 telle que H (x1) = H (x2).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image16.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 2.3: Propriétés de SHA (algorithmes de hachages sécurisés)
+
+Tableau 2.1 : Caractérisation de SHA (algorithmes de hachages sécurisés)
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hlineAlgorithme & Longueur de Message (bits) & Longueur de Bloc (bits) & Longueur du Mot (bits) & Longueur de Message Digest (bits) \\
+\hlineSHA-1 & < & 512 & 32 & 160 \\
+\hlineSHA-224 & < & 512 & 32 & 224 \\
+\hlineSHA-256 & < & 512 & 32 & 256 \\
+\hlineSHA-384 & < & 1024 & 64 & 384 \\
+\hlineSHA-512 & < & 1024 & 64 & 512 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+Le seul algorithme de hachage approuvé pour l’utilisation dans la présente norme IEEE1609.2 est le SHA-256 comme indiqué dans le Federal Information Processing Standard (FIPS) 180-3.
+
+Principe d’algorithme de hachage sécurisé SHA-256
+
+  Chaque algorithme peut être décrit en deux étapes :
+
+A./Préparation de message au traitement (Preprocessing).
+
+B./Calcul de Hachage (Hash Computation).
+
+  La préparation de message consiste à bourrer un message (padding), l’analyse du message qui être bourrer et le découper (parsing) en blocs de m bits, et définir les valeurs d’initialisation à utiliser dans le calcul de hachage. Le calcul de hachage génère « message schedule » du message bourré et l’utiliser, ainsi que des fonctions, des constantes et des opérations de mot de générer itérativement une série de valeurs de hachage. La valeur finale de hachage générée par le calcul de hachage est utilisée pour déterminer l’empreinte du message (message digest).
+
+Les Fonctions et les Équations utilisées dans SHA-256 :
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline &  & Équation 1.1 \\
+\hline &  & Équation 1.2 \\
+\hline &  & Équation 1.3 \\
+\hline &  & Équation 1.4 \\
+\hline &  & Équation 1.5 \\
+\hline &  & Équation 1.6 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+Constantes de SHA-256 :
+
+Le vecteur de hachage initial contient les valeurs initiales que le compresseur les utilise dans la première itération :
+
+SHA-256 utilise une séquence de soixante-quatre mots de 32-bit constants,,  ,…, . Ces mots représentent les trente-deux premiers bits des parties fractionnaires des racines cubiques des soixante-quatre premiers nombres premiers. Ces mots sont constants (de gauche à droite) représenter en hexadécimale.
+
+K256 [64] = \{
+
+0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1,  
+
+0x923f82a4, 0xab1c5ed5, 0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 
+
+0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174, 0xe49b69c1, 0xefbe4786,  
+
+ 0x0fc19dc6,   0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 
+
+0x983e5152, 0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147,  
+
+0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13, 
+
+0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85, 0xa2bfe8a1, 0xa81a664b, 
+
+0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070, 
+
+0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 
+
+0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208,     
+
+0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2                                                 \} ;
+
+Préparation de message au traitement (Preprocessing)
+
+Comme pour toutes fonctions de hachage connues, le message qui doit être hachée avec SHA-256estd’abord bourré de sorte que sa longueur finale est un multiple de 512 bits. Le message est complété de la manière suivante : 
+
+Ce prétraitement (Preprocessing) consiste en trois étapes : 
+
+Bourrage (Padding) de message, M
+
+Étant donné un message M de longueur L, ajouter un « 1 » pour le message de suivi de k zéros, où k est la solution non négative à l’équation de la plus petite l + 1+ k ≡ mod 448 512, suivi d’un bloc de 64 bits contenant la valeur de Longueur L sous forme binaire. Le message est ensuite analysé en N blocs de 512 bits, M (1), M (2),. .., M (N).
+
+• Le message x doit être bourré pour s’adapter à la taille d’un multiple de 512bits.•k≡512-64- 1 — l =448 — (l + 1) mod512.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image17.jpeg}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 2.4: Bourrage de message (Padding)
+
+Découpage de message bourré en N Blocks de message, de  512 bits chacun M (1),  …, M (N).
+
+Étant donné que les512bits du bloc d’entrée peuvent être exprimée en16mots de 32 bits.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image18.jpeg}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 2.5: Découpage de message en 16 sous blocks (Parsing)
+
+Définir la valeur de hachage initial, H (0) :
+
+Avant le calcul de hachage commence pour chacun des algorithmes de SHA, la valeur de hachage H (0), doit être initialisé. Pour SHA-256, la valeur de hachage initial, H (0), est composé de huit mots de 32 bits comme suit, en hexadécimale :
+
+Ces mots ont été obtenus en prenant les trente-deux premiers bits des parties fractionnaires des racines carrées des huit premiers nombres premiers.
+
+La valeur de hachage initial, H (0), remplacé par chaque valeur successive intermédiaire de hachage (après chaque bloc de message est traité), H (i), et se terminant parla valeur de hachage finale, H (N). Le SHA256 utilise également deux mots temporaires, T1 etT2.
+
+Calcul de SHA-256 (SHA-256 Hash Computation)
+
+Le calcul de SHA-256 utilise les fonctions et des constantes définies précédemment. L’addition (+) est effectuée modulo.Après le prétraitement est terminé, chaque bloc de message, M (1)..., M (N), est traitée dans l’ordre, on traite successivement les N blocs de M selon les étapes suivantes :
+
+Préparer une expansion de message « message schedule » , \{Wt\} : 
+
+Un « message schedule » de soixante-quatre mots de 32 bits. Représenté en un tableau de 64 mots, notésW0, W1, …, W63
+
+Pour i = 1 à N 
+
+\{        On remplit le tableau  selon ;
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline. & Équation 2 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+On initialise a, b, c, d, e, f, g et h avec les valeurs de hachage (huit variables de travail de32bits chacun) du tour précédent ;
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline &  & Équation 3.1 \\
+\hline &  & Équation 3.2 \\
+\hline &  & Équation 3.3 \\
+\hline &  & Équation 3.4 \\
+\hline &  & Équation 3.5 \\
+\hline &  & Équation 3.6 \\
+\hline &  & Équation 3.7 \\
+\hline &  & Équation 3.8 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+Pour de t = 0 à 63 :
+
+\{
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline & Équation 4.1 \\
+\hline & Équation 4.2 \\
+\hline & Équation 4.3 \\
+\hline & Équation 4.4 \\
+\hline & Équation 4.5 \\
+\hline & Équation 4.6 \\
+\hline & Équation 4.7 \\
+\hline & Équation 4.8 \\
+\hline & Équation 4.9 \\
+\hline & Équation 4.10 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+\}
+
+Calcule de iéme valeur intermédiaire de hachage H (i)
+
+Calcul des valeurs de hachage intermédiaires ;
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline & Équation 5.1 \\
+\hline & Équation 5.2 \\
+\hline & Équation 5.3 \\
+\hline & Équation 5.4 \\
+\hline & Équation 5.5 \\
+\hline & Équation 5.6 \\
+\hline & Équation 5.7 \\
+\hline\} & Équation 5.8 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+Après répétition des quatre étapes ci-dessus pour les N blocs du message M, (i.e., après traitement de M [N]), le condensé de 256 bits de M est obtenu par concaténation des valeurs.
+
+ Le résultat final de SHA-256 est un message de 256 bits digestion.[20][21][22]
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline & Équation 6 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+
+\subsubsection{Flow Graphe de SHA-256}
+
+\subsection{SHA-224}
+  La fonction SHA-224 est publiée pour la première fois en 2004. Le résultat produit (haché, « hash » ou condensât) est de 224 bits. Elle a été spécialement conçue pour fournir une empreinte dont la taille correspond à quatre clés DES de 56 bits chacune. L’algorithme est celui de SHA-256 avec pour seules différences :
+
+Des valeurs différentes pour l’initialisation (variables, …,) ;
+
+Une sortie tronquée à 224 bits (concaténation des contenus des 7 premières variables,…, .
+

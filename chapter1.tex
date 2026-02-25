@@ -1,0 +1,483 @@
+
+\chapter{Chapitre 1}
+
+\textbf{\Large Réseaux VANET et spécification des messages SAE J2735}
+
+
+\subsection{Introduction}
+  Le réseau inter-véhiculaire VANET est spécifié dans une série de normes, y compris celles générées par le groupe de travail IEEE P1609. Cette connectivité permet une gamme d’applications qui s’appuient sur les communications entre les usagers de la route, y compris la sécurité des véhicules, le service public, la gestion de la flotte commerciale, péage électronique, et d’autres opérations [4].
+
+Notion de VANET et applications
+
+ Notion de VANET
+
+  VANET (Vehicular Ad-hocal Networks), est une forme de  (réseau mobile Ad-hoc), qui fournir des communications au sein d’un groupe de véhicules à portée les uns des autres et entre les véhicules et les équipements fixes à portée (équipements de la route RSU : Road Side Unit). VANET utilise les voitures comme des nœuds mobiles dans un MANET pour créer un réseau mobile. Un VANET transforme chaque voiture participante à un routeur ou un nœud sans fil. Il permet aux voitures à distance, environ de 100 à 300 mètres, de se connecter les uns des autres et de créer un réseau avec une large gamme. Si les voitures tombent hors de la portée du signal et de restitution hors du réseau, d’autres véhicules peuvent se joindre comme des véhicules de liaison les uns aux autres de telle sorte qu’un Internet mobile est créé. On estime que les premiers systèmes qui intègreront cette technologie sont la police et les véhicules d’incendie, elle les permette de communiquer les uns avec les autres pour des raisons de sécurités [5].
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image7.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 1.1: Exemple d’une réponse sur un cas d’urgence sur la route dans VANET
+
+Cet exemple présente la réponse des composantes de réseau VANET au cas d’urgence sur la route.  
+
+  Le réseau inter-véhiculaire VANET est dédié à la communication à courte portée à accès sans fil dans des environnements véhiculaires (DSRC /WAVE, ci-après simplement WAVE). Il permet les communications sans fil de véhicule à véhicule (V2V), et de véhicule à une infrastructure (V2I).
+
+ Applications
+
+  Généralement, une RSU (Road Side Unit) est responsable de la fourniture de véhicules sur la route avec les informations de sécurité comme avertissement aux collisions de trafic, la notification aux accidents. Il rappelle aux conducteurs les règles potentielles; exemple : violation, avertissement, changement d’état des routes, etc. Il peut également être utilisé comme un agent de publicité pour des avantages commerciaux. D’autre part, un OBU (On Board Unit) peut se communiquer, d’échanger des messages concernant le trafic, état ​​de la route, etc., avec d’autres véhicules destinataires sur la route…
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image8.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 1.2: Exemple d’applications pour VANET
+
+D’autres applications possibles sont :
+
+• Système d’alerte d’urgence pour les véhicules.• Contrôle coopératif de la vitesse de croisière des véhicules.• Alerte aux collisions.• Évitement des collisions d’intersection.• Avertissement d’approche des véhicules d’urgence (Blue Waves).• Inspection de sécurité des véhicules.• Transi ou de priorité de signal de véhicule d’urgence.• Dédouanement et inspections de sécurité des véhicules commerciaux• Signature en – véhicule.• Avertissement en cas de retournement.• Sonde de collecte de données (OBD).• Avertissement d’intersection route – rail.• Paiements électroniques de stationnement (Télépéage) [6].
+
+Les Communications dédiées à courte portée (DSRC)
+
+Le concept de base de DSRC
+
+  Les Communications dédiées à courte portée (DSRC: Dedicated short-range communications) sont à sens unique ou bidirectionnel à courte portée. Ils sont spécialement conçus pour des canaux de communication sans fil de moyenne portée, l’industrie automobile et un ensemble correspondant de protocoles et de normes.
+
+En octobre 1999, la Federal Communications Commission des États-Unis (FCC) a alloué 75 MHz de spectre dans la bande 5,9 GHz pour être utilisé par les systèmes de transport intelligents (STI). En aout 2008, l’Institut des normes européennes de télécommunication (ETSI) a alloué 30 MHz de spectre dans la bande 5,9 GHz pour les STI.  En 2003, il a été utilisé en Europe et au Japon dans le télépéage. Les systèmes DSRC en Europe, au Japon et aux États-Unis ne sont pas compatibles et comprennent des variations très importantes (5,8 GHz, 5,9 GHz ou même à infrarouge), différentes vitesses de transmission, et de différents protocoles.[7][8][9].
+
+Les couches de protocoles utilisés dans la communication DSRC
+
+  Dans le contexte des réseaux VANET, la couche physique est formée par la commande radio qui est conforme à la norme IEEE 802.11p et est inhérente à l’OBE et RSE. La série IEEE 1609.x est spécifiée l’accès sans fil dans des environnements véhiculaires. Il se rassembler en couche de normes comme les couches du modèle OSI et contient une architecture globale du système DSRC/WAVE.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image9.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 1.3: Les couches de protocoles utilisés dans DSRC
+
+  La série de normes IEEE 1609 fournit une gamme de services qui sont nécessaires pour décrire les opérations dans DSRC (Dedicated Short Range Communication). La Figure 1.3 illustre le mappage entre le modèle OSI et les diverses normes 1609 qui contribuent au modèle WAVE. Les principales fonctions des composants sont 1609 comme suit : 
+
+IEEE 1609.1 définit les services de gestion à distance et décrit les services et les interfaces, y compris la sécurité et les mécanismes de protection de la vie privée. Il est associé avec le gestionnaire des ressources DSRC fonctionnant à 5,9 GHz autorisés par la FCC et qui satisfait les exigences des STI de communication sans fil.
+
+IEEE 1609.2 définit les formats de message sécurisé et le traitement des messages sécurisés, dans les systèmes DSRC /WAVE :— Définit les méthodes de sécurisation des messages, de gestion et d’application WAVE ; à l’exception que les messages de sécurité du véhicule préservant l’anonymat.— Décris les fonctions administratives nécessaires pour soutenir la fonction de sécurité de base.
+
+IEEE 1609.3 définit les services, opérant au niveau des couches réseau et transport. Il définit l’appui de connectivité sans fil entre les périphériques à base de véhicules et entre les dispositifs routiers fixes et dispositifs visant le véhicule en utilisant le mode DSRC /WAVE de 5,9 GHz.
+
+IEEE 1609.4 décrit les opérations de radio sans fil multicanaux qui utilise la norme IEEE 802.11p, Mode WAVE. Il décrit aussi le contrôle d’accès au support et la couche physique, y compris l’opération de contrôle et l’intervalle de temps de service de canal, les paramètres de priorité d’accès, le changement de canal et de routage, les services de gestion, et les primitives conçus pour les opérations multicanaux.
+
+IEEE 802.2 est la norme définissant la liaison de contrôle logique (LLC), qui est la partie supérieure de la couche de liaison de données pour les réseaux locaux. La sous-couche LLC présente une interface uniforme entre l’utilisateur du service de liaison de données, et la couche réseau.
+
+IEEE 802.11 est la norme pour les technologies de l’information — Télécommunications et l’échange d’informations entre systèmes — Réseaux locaux et métropolitains – spécifiques aux exigences — Partie 11 : LAN sans fil de contrôle d’accès au support (MAC) et les caractéristiques de couche physique (PHY).
+
+IEEE 802.11p est une version modifiée de la partie 11 conçue pour accueillir les fonctionnalités WAVE [10].
+
+SAE J2735 occupe les couches d’application et présentation du modèle OSI, car il fournit des données encapsulées sous forme de messages.
+
+  SAE J2735 (DSRC message Set), définit également un message de sécurité de base Basic Safety Message appelé message de battement de cœur, car il est envoyé environ toutes les 10 millisecondes. Basic Safety Message est diffusé à tous les véhicules environnants, et contient des données qui peuvent être utilisées pour des raisons de sécurité [10].
+
+Les services de sécurités
+
+  Dans la norme IEEE1609.2, on retrouve les services de sécurité pour la couche réseau de WAVE et pour les applications destinées à fonctionner sur la couche. Ces mécanismes sont prévus pour authentifier les messages de gestion de WAVE, pour authentifier les messages qui ne nécessitant pas d’anonymat, et pour crypter les messages à un destinataire connus. Les services comprennent le cryptage en utilisant la clé publique d’un autre parti et l’authentification non anonyme. La confidentialité (cryptage d’un message pour un destinataire spécifique) permet d’éviter l’interception ou la modification d’un message. L’authenticité (confirmation de l’origine du message) et l’intégrité (confirmation que le message n’a pas été modifié en transit) évitée incitante un destinataire à accepter le contenu des messages incorrects. L’anonymat des utilisateurs finaux est également une exigence. Des mécanismes cryptographiques fournissent la plupart de ces exigences de sécurité, et de leurs trois grandes familles qui sont : clé secrète ou algorithmes symétriques, les algorithmes à clé publique ou asymétrique, et des fonctions de hachage (Hash algorithm).
+
+SAE J2735 DSRC Message Set
+
+  Au sommet de la pile de protocoles, la couche application comprend des processus d’application et des protocoles additionnels qui fournissent un soutien direct aux applications. Un exemple de ce dernier est le dictionnaire de jeu de messages J2735 (Message Set Dictionary). Il définit des messages qui permettent un ensemble de quinze collectivement d’applications DSRC de base. SAE J2735 définit le format de chacun des types de messages DSRC. Chaque message est défini comme un ensemble de structures de données appelées constitutives des éléments de données (Data Element) et des trames de données (Data Frame). Un élément de données (Data Element) est une structure de données la plus fondamentale dans la norme J2735. Une trame de données (Data Frame) est une structure de données plus complexe, composée d’un ou plusieurs éléments de données ou d’autres trames de données. La norme J2735 définit la syntaxe (longueur, format) et la sémantique de chaque élément de données et trame de données.
+
+J2735 Message Set Dictionary composer de :
+
+15 Messages
+
+72 Trame de donnée (Data Frame)
+
+146 Éléments de donnes (Data Elements)
+
+11 Entrées de données externes (External Data Entries)
+
+
+\subsection{J2735 Message Set}
+MSG\_A La Carte Message:
+
+  À La Carte Message est un message générique de contenu flexible. C’est un message composé entièrement par des éléments de message qui sont déterminés par l’expéditeur pour chaque message. Le message est fondamentalement composé de deux sections, un octet pour la première section et un octet pour la deuxième section.
+
+MSG\_BasicSafetyMessage:
+
+  Le véhicule transmet dans Basic Safety Message des informations d’état nécessaires pour supporter les applications de sécurité de V2V. 
+
+MSG\_Common Safety Request:
+
+  Un véhicule utilise ce message pour demander des informations spécifiques de l’état d’un autre véhicule. Ce type de message fournit un moyen, par lequel, un véhicule à l’échange de message de sécurité de base (BSM) pour demander aux autres véhicules des informations supplémentaires dont il a besoin pour les applications de sécurité, qui sont en cours d’exécution. 
+
+MSG\_Emergency Vehicle Alert Message:
+
+  Le message est utilisé pour diffuser des messages d’alerte aux véhicules environnants lorsqu’un véhicule à un état d’urgence (généralement un répondeur incident d’un certain type) opère dans le voisinage et que la prudence supplémentaire est nécessaire. Notez que ce message peut être utilisé par les véhicules d’intervention privée et publique, et que la priorité relative de chacun (ainsi que les certificats de sécurité) est déterminée dans la couche d’application.
+
+MSG\_Intersection Collision Avoidance:
+
+  Ce message fournit des informations de localisation de véhicules par rapport à une intersection spécifique, pour construire des systèmes pour éviter les collisions aux intersections. Il identifie l’intersection étant rapportée sur le chemin récent et l’accélération du véhicule.
+
+MSG\_Map Data:
+
+  Envoyé par RSU pour transmettre la description géographique d’une intersection.
+
+MSG\_NMEA Corrections:
+
+  Le message NMEA\_Corrections est utilisé pour encapsuler un style de corrections GPS le style NMEA 183 de radionavigation GPS telle que définie par la NMEA (National Marine Electronics Association) comité dans sa norme de protocole standard 0183. Dans le fonctionnement de DSRC, ces messages sont » emballés » pour le transport sur les médias DSRC, et peuvent ensuite être reconstruites de nouveau dans les formats attendus finals définis par la norme NMEA et utilisées directement par les systèmes de positionnement GPS pour augmenter les estimations de la précision absolue et relative produites.
+
+MSG\_Probe Data Management:
+
+  Envoyé par RSU pour gérer la collection des données des sondes de véhicules.
+
+MSG\_Probe Vehicle Data:
+
+  Ce message est utilisé pour échanger les états d’un véhicule avec d’autres (généralement RSU) récepteurs DSRC pour permettre généralement la collecte d’informations sur les véhicules voyageant le long d’un segment de route. En utilisation normale du véhicule déclaration a recueilli un ou plusieurs instantanés qui il en verra à une RSU réception avec des informations (le vecteur) sur le point dans le temps et l’espace lorsque l’évènement s’est produit instantané. Parce que toute séquence de clichés est liée dans une plage de limite de temps et d’espace, une certaine compression de données peut être utilisée dans le message de réduire l’information redondante.
+
+MSG\_Roadside Alert:
+
+  Envoyé par RSU pour alerter les véhicules à des conditions dangereuses.
+
+MSG\_RTCM Corrections:
+
+  Le message RTCM\_Corrections est utilisé pour encapsuler les corrections style RMC de radionavigation GPS et tel que défini par le RTCM (Radio Technical Commission pour les services maritimes) Numéro de commission spéciale104dans ses diverses normes. Dans le fonctionnement de DSRC peut ensuite être reconstruite de nouveau dans les formats finals attendus définis par la norme RTCM et utilisée directement par les divers systèmes de positionnement pour augmenter l’estimation de la précision absolue et relative produite.
+
+MSG\_Signal Phase and Timing Message:
+
+  Envoyé par RSU à un carrefour à feux pour transmettre l’état de phase et le calendrier du signal.
+
+MSG\_Signal Request Message:
+
+  Un véhicule utilise ce message pour demander un signal de priorité ou une préemption de signaux.
+
+MSG\_Signal Status Message:
+
+  Envoyé par RSU pour transmettre l’état des demandes de signal.
+
+Message : MSG\_Traveler Information :
+
+  Envoyé par RSU pour transmettre des types d’informations et de conseils de signalisation routière.
+
+Message de sécurité de base SAE J2735 DSRC
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image10.jpeg}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 1.4: SAE J2735 Basic Safety Message
+
+Définitions de message de sécurité de base (Basic Safety Message)
+
+  Le message de sécurité de base (Basic Safety message), BSM, est peut-être le message le plus important dans la norme SAEJ2735. Il transmet des informations sur l’état de base de véhicule, à savoir sa position, la dynamique, l’état du système, et la taille. Il a également la possibilité de transmettre des informations supplémentaires au besoin. Il a été une recherche approfondie sur le contenu des messages de sécurité pour éviter les collisions.   Cette recherche a démontré que, bien qu’il existe de nombreuses applications d’évitement des collisions distinctes, il existe un chevauchement important dans les informations d’état que chaque véhicule doit le recevoir de ses voisins pour une application donnée. La communauté SAE (Society of Automotive Engineers) a conduit à la définition de la BSM (Basic Safety Message) pour le soutien de toutes les applications de sécurité V2V, plutôt que de définir un groupe de messages spécifiques d’application.
+
+  Ce message est diffusé aux véhicules environnants périodiquement avec une variété de contenu de données requises par les différentes applications. Certaines données sont envoyées à chaque instance du message. Autres informations sont envoyées périodiquement ou de façon sélective sur la base des demandes d’autres véhicules à proximité.
+
+  Dans le système de base défini par la norme SAEJ2735 chaque nœud (véhicule) fait une mise à jour et envoie son propre BSM chaque 100 ms (10 ms au cas d’alerte) sur le canal WSM18 aux autres appareils à proximité (généralement des véhicules, mais aussi potentiellement RSU). Il n’y a pas de poignées de main ou de reconnaissance entre les dispositifs, il n’existe aucune association ou processus (suivie de la collecte des véhicules en vue est la responsabilité de chaque récepteur) qui les rejoindre. Une valeur temporaire dans le corps du message permet la corrélation de BSM à un véhicule spécifique pour de courtes périodes de temps (nécessaires pour les estimations de trajectoire). Le message de BSM devrait être le message le plus fréquent statistiquement vu sur les ondes.
+
+Description des Éléments et des trames de données de BSM
+
+La hiérarchie des éléments de données de message de sécurité de base (BSM: Basic Safety Message) est donnée dans la figure suivante :
+
+Figure 7 : Element et Frame détaillé de BSM
+
+  Les définitions des trames de données (Data Frames) et les éléments de données (Data Elements) sont indiqués dans la liste ci-dessous en détaillé :
+
+1.msgCnt signifieMsgCount (1 byte) 
+
+2. id est un TemporaryID (4 bytes) 
+
+3. secMark est le DSecond (2 bytes) – représentée en millisecondes pendant une minute.
+
+4. pos se compose de donnée de PositionLocal3D : 
+
+   a. lat signifie Latitude (4 bytes) – exprimé en1/10e de microdegré
+
+   b. long signifie Longitude (4 bytes) — exprimée en1/10e de microdegré
+
+   c. elev signifie Elevation (2 bytes) – exprimé en décimètres au-dessus ou en dessous de l’ellipsoïde de référence
+
+   d. accuracy signifie Positional Accuracy (4 bytes) 
+
+i. Précision semi-major – représentée en 0.05m 
+
+      ii. Précision semi-mineure — représentée en0.05m
+
+      iii. Orientation de semi-major axe par rapport au nord
+
+5. motion se compose de ce qui suit : 
+
+    a. speed indique la Transmission et de la vitesse (2 bytes)
+
+i. Bits de 1 à 13 représentée la vitesse en 0.02 m/s 
+
+ii. Bits de 14 à 16 est l’état de Transmission 
+
+    b. heading indique Heading (2 bytes) exprimé en de 0,0125 degré Nord
+
+    c. angle indique l’angle de direction (1 byte) a exprimé à 1,5 degré à droite étant positif     d. accelSet indique AccelerationSet4Way (7 octets)        i. accélération longitudinale — représenté en 0,01 m/s        ii. Accélération latitudinale — représenté en 0,01 m/s        iii. Acceleraion verticale — représenté en 0,01 m/s
+
+iv. yaw taux de lacet – exprimée en 0.01 dégrée par seconde et doit être positive à la droite
+
+6. control se composé de tous les termes de commande de mouvement :
+
+    a. brakes qui montrent le système de freinage (2 bytes) 
+
+        i. wheelBrakes comme Statut frein appliquée (4 bits) 
+
+        ii. wheelBrakesUnavailable (1 bit) 
+
+        iii. spareBit (1 bit) 
+
+        iv. traction comme TractionControlState (2 bits) 
+
+        v. abs comme AntiLockBrakeStatus (2 bits) 
+
+        vi. scs comme StabilityControlStatus (2 bits) 
+
+        vii. brakeBoost comme BrakeBoostApplied (2 bits) 
+
+        viii. auxBrakes comme AuxiliaryBrakeStatus (2bits) 
+
+7. size comprend la taille de vehicule (3 bytes) 
+
+    a. VehicleWidth – en centimètres (10 bits) 
+
+    b. VehicleLength – en centimètres (14 bits) 
+
+Application : Feu de freinage d’urgence électronique (Emergency Electronic Brake Lights)
+
+Description d’application
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image11.jpeg}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 1.7: L’application de feu de freinage d’urgence électronique
+
+  Lorsqu’un véhicule fait un frein dur, l’application de feu de freinage d’urgence électronique envoie un message aux véhicules suivants. Cette application va aider les conducteurs de véhicules suivants en donnant une notification précoce du véhicule de tête de freinage dur. 
+
+  Il est utile spécialement lorsque la visibilité du conducteur est limitée (par exemple en vue de grands blocs de camion du conducteur, un épais brouillard, pluie). La lampe de frein est  s’allume lorsque le conducteur applique un frein. L’application de feu de freinage d’urgence électronique peut non seulement améliorer la portée d’alerte au freinage, mais aussi pourrait fournir des informations importantes telles que le taux d’accélération ou décélération. À l’heure actuelle, les lampes de frein ne font pas de niveau de décélération et ne sont utiles que dans la mesure arrière comme la ligne de mire le permet.
+
+
+\subsection{Flow des évènements }
+
+\subsubsection{Tableau de flow des évènements}
+Tableau 1.1 : Tableau de flow des évènements
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hlineFlow des évènements &  &  &  &  &  \\
+\hline1.  Le véhicule “A” emis MSG\_BasicSafetyMessageFrame, Part I &  &  &  &  &  \\
+\hline2.  Le véhicule « B » recevoir le message &  &  &  &  &  \\
+\hline3.  Le véhicule « B » reconnait que le message du véhicule A est pertinent (rubrique similaire à l’avance de la trajectoire du véhicule B) et un évènement de freinage important est en cours par les informations du message (par exemple, de décélération, la pression de freinage). &  &  &  &  &  \\
+\hline4.  Le véhicule « B » alerte son pilote à l’évènement de freinage et fournit une indication de la gravité de freinage. &  &  &  &  &  \\
+\hlineÉquipements Matériels : & DSRC radio Capteurs de position Interface Homme-Machine &  &  &  &  \\
+\hlineActeurs : (qu’elles sont les entités joue un rôle actif dans l’utilisation ?) & Systèmes Véhicule & Occupant & Fournisseur de Service & Département de la route &  \\
+\hline &  & pilote & Passager &  &  \\
+\hline & X & X &  &  &  \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+Concept des opérations
+
+  Pour cette application, on suppose que le véhicule en situation de freinage d’urgence pourrait être équipé d’une unité de DSRC. On suppose également que le véhicule serait envoyer un message aux véhicules suivants, y compris celles qui pourraient avoir une collision avec freinage du véhicule. L’expéditeur du message doit avoir un algorithme pour décider si une livraison de message « freinage d’urgence » est nécessaire (par exemple : décélération supérieure à 0,6 g). Si un véhicule détermine qu’il freine dur alors il pourrait utiliser l’appareil embarqué de DSRC et de partager cette information avec d’autres véhicules. Le véhicule d’envoi pourrait utiliser le trame de message BSM, Partie I, et le trame de message BSM, partie II. Cet avertissement ayant un niveau de priorité plus élevé que la diffusion systématique de trame de message BSM, Partie I et le trame de message BSM,partieII.  Afin de déterminer si un message « freinage d’urgence » est pertinent pour le véhicule qui est à l’écoute, le véhicule qui est à l’écoute a besoin de connaitre la position relative de qui provient le message (par exemple, avant, arrière, gauche, droite). Ceci peut être fait sur ​​la base de son information de GPS et les informations GPS du véhicule au freinage. Dans ce scénario simple, la demande est à court terme. Un message « freinage d’urgence » d’un véhicule peut ne pas s’appliquer nécessairement à un véhicule circulant sur ​​une voie adjacente.
+
+
+\subsubsection{Les Capteurs et les autres besoins du système}
+  Une base de données pour la carte géographique peut aider à fournir des informations pertinentes spécifiques liées à des segments de la route actuelle. Cela pourrait permettre, par exemple, la géométrie de l’intersection ou courbure de la route à prendre en compte quand un véhicule hôte évalue l’application « message de freinage d’urgence » pour voir si une alerte au conducteur est nécessaire.
+
+Utilisation de message BSM
+
+  Dans cet exemple d’application, j’ai créé un message BSM valide, mais simple en utilisant les éléments de données de haut niveau d’exigence définis dans le message. J’ai codé alors cela en structure ASN, puis en un message valide, j’ai utilisé la bibliothèque ASN pour accomplir cette tâche. J’ai également examiné brièvement l’outil ASN1VE qui ma supporte à créer le message et devoir le codage résultant. Dans les prochaines applications, ces détails sont examinés plus en profondeur (notamment en matière de création d’encodages de l’ASN).
+
+
+\subsubsection{Présentation du message de sécurité de base en ASN.1 :}
+  La définition ASN.1dumessage de sécurité de base BSM (pris dans la normeSAEJ2735) est fournie ci-dessous. J’ai examiné maintenant comment cela est converti par l’outil de ASN.1 choisi pour produire la banque ASN qui l’application peut utiliser.
+
+BasicSafetyMessage ::= SEQUENCE \{
+
+-- Part I
+
+msgID DSRCmsgID, -- 1 byte
+
+-- Sent as a single octet blob
+
+blob1 BSMblob,
+
+-- Part II, sent as required
+
+-- Part II,
+
+safetyExt VehicleSafetyExtension OPTIONAL,
+
+status VehicleStatus OPTIONAL,
+
+... -- \# LOCAL\_CONTENT
+
+\}
+
+  Le message se compose de quatre parties discrètes, tout aussi définies par la norme. L’élément de « BSMblob » se représenter comme des gouttes d’octets. En conséquence, ce message est sensiblement plus long et plus large. Au-dessous, la présentation détaillée de BSM part I et part II en ASN.1.
+
+BasicSafetyMessageVerbose ::= SEQUENCE \{
+
+-- Part I, sent at all times
+
+msgID DSRCmsgID, -- App ID value, 1 byte
+
+msgCnt MsgCount, -- 1 byte
+
+id TemporaryID, -- 4 bytes
+
+secMark DSecond, -- 2 bytes
+
+-- pos PositionLocal3D,
+
+lat Latitude, -- 4 bytes
+
+long Longitude, -- 4 bytes
+
+elev Elevation, -- 2 bytes
+
+accuracy PositionalAccuracy, -- 4 bytes
+
+-- motion Motion,
+
+speed TransmissionAndSpeed, -- 2 bytes
+
+heading Heading, -- 2 bytes
+
+angle SteeringWheelAngle, -- 1 bytes
+
+accelSet AccelerationSet4Way, -- 7 bytes
+
+-- control Control,
+
+brakes BrakeSystemStatus, -- 2 bytes
+
+-- basic VehicleBasic,
+
+size VehicleSize, -- 3 bytes
+
+-- Part II, sent as required
+
+-- Part II,
+
+safetyExt VehicleSafetyExtension OPTIONAL,
+
+status VehicleStatus OPTIONAL,
+
+... -- \# LOCAL\_CONTENT
+
+\} (Voir Annexe)
+
+  Des données supplémentaires peuvent être ajoutées en fonction d’une détermination à bord des évènements qui se déroulent (comme les freinages brusques qui provoquerait que l’élément d’évènement « Data Flag » également être envoyé). Dans le même temps une prise de réception sera d’obtenir BSM diffusée à partir d’autres appareils à proximité, à un taux similaire. Une grande variété de méthodes de traitement a été proposée pour le traitement des messages entrants BSM. On peut classer et ordonner le message entrant à des pistes connues de véhicules, véhicules nouvellement détectés, et diverses catégories de menaces possibles. Alors il faut tourner vers les processus de services de sécurité pour la sureté de communication et son niveau de sécurité d’informations qu’il faut l’utiliser.
+
+Exemple d’un message BSM vide
+
+BasicSafetyMessage ::= \{
+
+    msgID : 02
+
+    msgCnt : 00
+
+    secMark: 000000
+
+    id : 00 00 00 00
+
+blob1 : 
+
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+        00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+\}
+
+Construction d’un message BSM
+
+Tableau 1.2 : Construction de Message BSM
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|}
+\hlineNom d’élément    Valeur simple       Longueur en Octet Valeur en Hexa Commentaires \\
+\hlinemsgID                          2                               1                        0x02  blob1                                                            38  msgCnt                1                                       1                         0x01                 Arbitraire secMark               60 000                              2                     0xEA, 60              Arbitraire  id                         32,33,34,35                     4                0x20, 21, 22, 23         Arbitraire lat                         35 deg north                    4                    10B07600              1/8th micro deg long                      120 deg west                   4                    39 387 000            1/8th micro deg elev                      1000 meters                    2                       2710 accuracy               Perfect Accuracy            4                00, 00 , 00 , 00 speed                    50.00 m/s                       2                        1388             dans 0.01 ms, conduite  heading                Due south                      2                         4000  angle                    Ahead                            1                          \_\_\_ accelSet                None                              7                     0000, 0000,00,0000 None, and no yaw  brakes                  All on/Active                   2                                FF, F0        trac/abs/scs present  size (with)             220 cm                   3(1/2 of 3)                          0DC                environ 6 ft  size (length)          670 cm                    3(1/2 of 3)                          29E                environ 22 ft \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+BasicSafetyMessage : : = \{
+
+    msgID: 02
+
+    msgCnt: 01
+
+    secMark: 00EA60
+
+    id : 20 21 22 23
+
+    blob1 : 
+
+    10 B0 76 00 39 38 70 00 27 10 00 00 00 88 13 88 40 
+
+    00 00 00 00 00 00 00 00 FF F0 0 D C2 9E
+
+\}
+
+BSM format simple (Implicite)
+
+Message BSM simple =>
+
+02 01 00 EA 60 20 21 22 23 10 B0 76 00 39 38 70 00 27 10 00 00 00 88 13 88 40 00 00 00 00 00 00 00 00 FF F0 0D C2 9E
+
+
+\subsubsection{6.3.2 Format BER des messages BSM}
+  Le codage Basic Encoding Rules (règles d’encodage basique), dont l’acronyme est BER, est un des formats d’ définis par le standard  [11].
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image12.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 1.8: Création d’un message BSM en format BER, en utilisant ASN1VE Tool
+
+ASN1VE est une interface graphique (GUI) et outil d’analyse et d’édition des donnes codées en BER/DER. Il offre la possibilité d’attribuer un schéma ASN.1 de donnée binaire pour produire des vues multiples des données montrant tous les noms de type et éléments affectés.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image13.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 1.9: Identification des éléments « Blob » Tag:[4] sur ASN1VE Tool
+
+  L’outil ASN1VE compile le fichier contenant la présentation en ASN de message de sécurité de base (BSM). Il permet ensuite de construire des exemplaires de message par différent type de codage comme le BER.
+
+Message BSM en format BER =>
+
+30 31 80 01 02 81 01 01 82 03 00 EA 60 63 04 20 21 22 23 84 1E 10 B0 76 00 39 38 70 00 27 10 00 00 00 88 13 88 40 00 00 00 00 00 00 00 00 FF F0 0D C2 9E
+
+Tableau 1.3: Construction des éléments de données dans un message BSM Valider avec les valeurs maximales
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|}
+\hlineNom d’élément    Valeur simple       Longueur en Octet Valeur en Hexa Commentaires \\
+\hlinemsgID                          2                               1                        0x02  blob1                                                            38    msgCnt                    \_                               1                                              Arbitraire   secMark                   \_                               2                                              Arbitraire id                             \_\_                               4               0x20, 21, 22, 23       Arbitraire lat                      90 deg north                     4                    2AEA5400         1/8th micro deg long                   180 deg west                    4                    55D4A800         1/8th micro deg elev                   6143.9 meters                  2                       EFFF accuracy        Worst Accuracy                   4                7F, 7F, 7 F, FF speed                 327.67 m/s                      2                       7FFF      dans 0.01 ms, conduite heading               Due south                      2                        4000 angle                         00                            1                          \_\_\_ accelSet               Extreme                        7           07D0,07D0,7 F,7FFD None, and no yaw brakes               All on/Active                    2                        FF, F0         trac/abs/scs present size (with)              1023 cm                3(1/2 of 3)               3 FF                 environ 6 ft size (length)          4095 cm                 3(1/2 of 3)               FFF                 environ 22 ft \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}

@@ -1,0 +1,171 @@
+
+\chapter{Chapitre 3}
+
+\textbf{\Large Spécification de SHA-256 avec l’outil de synthèse haut niveau GAUT}
+
+Introduction
+
+  Le Synthèse de haut niveau (HSL : High Level Synthesis) promet d’être l’une des solutions pour faire face à l’augmentation significative de la demande pour la productivité de la conception au-delà de l’ouverture des procédés de l’art. Il offre également la possibilité d’explorer l’espace de conception d’une manière efficace en traitant avec des niveaux d’abstraction plus élevés et moyens rapides de mise en œuvre pour prouver la faisabilité d’algorithmes. Dans ce projet de fin d’études, nous avons essayé d’explorer ces différentes possibilités en utilisant un outil HLS. Nous avons démontré et vous renseignez sur les avantages de la mise en œuvre d’une conception au niveau supérieur d’abstraction et le contrôle de la génération de RTL en utilisant diverses contraintes de HLS.
+
+Introduction de logiciel GAUT :
+
+  GAUT est un outil de HLS (High Level Synthesis) développé à l’Université de Bretagne Sud (UB). Laboratoire Lab-STICC. G.A.U.T. génère des descriptions RTL d’une spécification algorithmique décrit en C ou C + +.
+
+  GAUT s’adapte aux flots de conception up-down (Haut vers le Bas) et les cibles ainsi le FPGA ou ASIC. Il est dans la phase de « synthèse comportementale », aussi connu comme « High Level Synthesis ». Son objectif est de générer une description VHDL de niveau RTL (Register Transfer Level) à partir d’une spécification algorithmique « comportementale ».
+
+Flow de conception avec GAUT
+
+ Pour démarrer la flow de conception avec GAUT, il faut d’abord de traduire l’algorithme de SHA-256 en C/C++. Puis, d’adapter le code écrit en C/C++ avec le compilateur de GAUT. Le compilateur est généré automatiquement un fichier d’extension « .CDFG » utiliser ensuite pour les autres étapes de synthèses.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image19.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 3.1: Flot de conception avec GAUT
+
+Flow de Synthèse Haut Niveau (HLS) avec GAUT
+
+   GAUT prend la description fonctionnelle d’un circuit numérique en forme de code C ou C++, puis il génère un fichier CDFG. Dans la phase de Synthèse RTL, il prend cette CDFG et génère un code VHDL après l’application des paramètres de la planification, l’attribution et la liaison. Différentes contraintes peuvent être appliquées sur les paramètres de la planification, l’attribution et la phase de liaison pour explorer l’espace de conception efficace et efficiente. Dans ce contexte, j’ai apprendrez à appliquer ces contraintes et voir les effets de variations de ces mesures dans ces étapes.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image19.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 3.2: Flow de conception pour la synthèse haut niveau avec GAUT
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image20.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 3.3: Fenêtre principale de GAUT
+
+On peut voir dans la fenêtre principale de logiciel GAUT les différentes étapes de conception en commençons par l’étape de compilation de code C/C++ qui décrit de façon comportementale notre algorithme à concevoir.
+
+Les étapes de conception de compresseur de SHA-256 avec GAUT
+
+3.1. Étape de spécification
+
+  Nous avons décrit l’algorithme de compresseur de SHA-256 en code C++, puis nous avons la compiler à l’aide de compilateur de GAUT.
+
+
+\subsubsection{Compilation de cœur SHA-256 (fonction de compression) décrit en code C}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image21.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.4: Compilateur C/C++ de GAUT
+
+Dans cette fenêtre, nous avons écrit le code en C qui décrit l’algorithme de compresseur de SHA-256. Le compresseur de SHA-256 est la partie responsable de la calcule des vecteurs de hachage. Il est la partie itérative principale dans la conception hardware de SHA-256.
+
+
+\subsubsection{Extraction de la DFG Graph de compression de SHA-256}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image22.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 3.5: Génération de DFG de Compresseur de SHA-256  sous GAUT
+
+Les nœuds en vert représentent les entrées.
+
+Les nœuds en jaune représentent les sorties.
+
+Les nœuds en oranger représentent les valeurs intermédiaires.
+
+Les nœuds en bleu représentent les opérations sur les données d’entrées et les données intermédiaires. 
+
+
+\subsection{Les procédures de synthèse}
+  Nous allons appliquer différentes contraintes sur cette conception dans le but de synthèse RTL. On peut utiliser ces contraintes, pour le changement du programme de spécification, la répartition et les paramètres de liaison de plusieurs façons.
+
+On met la cadence « the cadency value » en 20 ns.
+
+On met la période d’horloge « the clock period » en 10 ns.
+
+Le type d’output VHDL  en « fsm\_regs ». Toutes les valeurs restantes gardées par défaut.
+
+Le Synthèse de design fait par un clic sur le bouton « control ».
+
+
+\subsubsection{4.1. Synthèse de haut niveau}
+Une partie de l’information présentée dans le rapport de synthèse est la suivante :
+
+The CDFG parsing step
+
+Parsing CDFG. . . nodes = 82
+
+Selection ... 
+
+area = 206
+
+The Allocation step
+
+Allocation… Operators = 15, stages = 5
+
+CDFG Latency = 9 clock cycles
+
+The scheduling step
+
+Scheduling… Operators = 17, Latency = 140, stages = 7
+
+Register allocation
+
+Bus Allocation. . . 13 data buses
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image23.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 3.6: Synthèse VHDL avec GAUT
+
+Le rapport de synthèse de fonction de compresseur de SHA-256 avec GAUT donne les résultats suivants : 
+
+Nombre des nœuds : 82, Surface : 206 Slices, Nombre d’opérateurs logiques : 15, Nombre d’étages de pipelining : 5, Latence : 9 cycles d’horloge…
+
+
+\subsubsection{Affichage des résultats de synthèse}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image24.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 3.7: Diagramme de Gantt pour le compresseur synthétisé multi-cycle
+
+On peut visualiser les résultats de synthèse sur l’anglé résultat de fenêtre principale de GAUT.
+
+La Fig.18 montre la chronologie de données pour un design multi-cycle (pipelined).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image25.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 3.8: Diagramme de Gantt pour le compresseur synthétisé uni-cycle
+
+On peut visualiser les résultats de synthèse sur l’anglé résultat de fenêtre principale de GAUT.
+
+La Figure 3.8 montre la chronologie des données pour la conception uni-cycle.
+
+Si on Resynthétiser le même design en définissant les contraintes de cadence à 190 ns, 140 ns, 90 ns, 50 nset30 ns, on trouve des résultats différents pour le diagramme de Gantt. Tout en diminué le temps de cadence, la complexité de design est augmenter. Toujours il y a des limites pour le temps minimal de cadence.
+

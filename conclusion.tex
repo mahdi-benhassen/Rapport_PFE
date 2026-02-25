@@ -1,0 +1,433 @@
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+  Les messages de type message sécurité de base (BSM : Basic Safety Message) qui circule dans le réseau VANET nécessitent une approche de sécurité. Il est vital que les services de sécurités spécifiés puissent être utilisés pour protéger les messages contre les attaques telles que l’écoute, l’usurpation d’identité, l’altération, et la relecture.
+
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+  Étant donné que les sorties de hachage sont relativement faibles par rapport aux messages d’origine, les algorithmes de hachage prennent un pain important pour l’efficacité de calcul. Compte tenu de la quantité de données de plus en plus de stocker ou de communiquer, le débit des algorithmes de hachage est un facteur important. Pour cela, on peut recours à des solutions telles que l’implémentation hardware de l’algorithme se hachage sécurisé SHA-256.
+
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+  Le choix de conception avec un outil de synthèse haut niveau « GAUT » est une approche utile pour les conceptions qui contient des modules de traitement de signal DSP. Il réduit le temps de conception de SHA-256. Dans notre cas, l’implémentation de SHA-256 est déjà existé dans différents articles avec tous les composants nécessaires. Donc, il est facile de le décrire manuellement en RTL à l’aide de langage de description matérielle par exemple le VHDL et l’implémenter sans passer par cette approche.
+
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+  Nous avons analysé l’iteration bound pour les composants itératifs de SHA-256 et nous avons montré des architectures pour améliorer la réalisation des itérations. L’itération a une limite théorique, il n’y aura pas plus d’optimiser le débit du niveau microarchitecture. Nous avons également synthétisé la conception pour vérifier la justesse de ma conception de l’architecture. En outre, nous avons illustré les étapes détaillées d’un DFG à une architecture optimisée de débit. Cette approche guidera comment optimiser certains autres algorithmes de hachage itératifs en débit.
+
+
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+  L’objectif de ce projet de fin d’études est de concevoir une architecture de l’algorithme de hachage sécurisé (Secure Hash Algorithm) SHA-256 et de l’implémenter sur FPGA. Cette conception de SHA-256 peut être utilisée dans la signature numérique des messages BSM et assurer alors la sécurité des communications VANET.
+
+  Le réseau VANET est une technologie de communication sans fil prometteuse, pour améliorer les services de la sécurité routière et d’information. Dans ce projet de fin d’études, nous avons introduire le cadre de sécurité des communications spécifiées dans la norme IEEE1609.2. Ce cadre définira les aspects de l’infrastructure sur laquelle les véhicules seront fournis pour des certificats de sécurité, ainsi que les moyens par lesquels l’infrastructure de sécurité peut être avisée si un véhicule détecte un dispositif de mauvaise conduite. Le projet de sécurité des communications V2V étudie ces questions et proposé des solutions. 
+
+  La mise en œuvre d’algorithme d’authentification ECDSA du Message est présentée. L’architecture proposée est basée sur la fonction de hachage SHA -256 puissant. Il peut également être intégré dans des systèmes d’authentification qui sont utilisés pour la mise en œuvre des réseaux véhiculaires VANET et des protocoles sans fil en général. L’unité proposée garantit le niveau de sécurité élevé dans toutes les applications, nécessitant une authentification de message, via la construction d’un code d’authentification de message basé sur une fonction de hachage. L’architecture proposée a des performances de haut débit. L’unité SHA -256 sur laquelle le processus EDSCA est basé est plus rapide par rapport à d’autres implémentations.
+
+  Nous avons proposé et analysé une architecture de SHA-256. Depuis l’iteration bound, il y a une limite théorique, il n’y aura pas plus d’optimiser le débit du niveau de la microarchitecture. Nous avons également synthétisé notre conception pour vérifier la justesse de notre conception de l’architecture. 
+
+  Les circuits décrits ont été mis en œuvre en utilisant VHDL avec une implémentation sur FPGA sur la carte Spartan 3E. L’amélioration est importante, et elle est obtenue par canalisant le circuit sans augmentation du nombre total de cycles d’horloge par une quantité importante : nous passons des cycles de 65 d’horloge nécessaire pour une mise en œuvre simple de l’algorithme pour les 69 cycles nécessaires par le projet mis en œuvre (en considérant également l’accumulation du résultat dans les registres de hachage intermédiaires). Il est possible d’effectuer ces optimisations parce que l’algorithme SHA-256 a des caractéristiques précises, telles que les registres à décalage dans le compresseur qui sont implicitement définis par les lignes A, B, C, D et E, F, G, H variables dans la description de l’algorithme.
+
+  Les futurs travaux se poursuivent sur la performance de communication sécurisée basée V2V de VANET. Nous proposons d’améliorer la performance de SHA-256 et de l’optimiser en débit. Autre approche qui est la conception ASIC avec des technologies acceptables en performance.
+
+Annexe
+
+Description et représentation en ASN.1 des éléments et des trames de données de message BSM
+
+Data Element: DE\_DSRC MessageID
+
+Use:  The DSRC Message ID is an element used to define which type of message follows in the messages of this standard.  The values for ACID and ACM of a given application are contained in a lower layer of the WSMP process, and along with the message itself, are presented to the application after being transported as a stream of bytes.  This data element is typically the first byte and used to tell the receiving application how to interpret the remaining bytes (i.e. what message structure has been used).
+
+ASN.1 Representation : 
+
+DSRCmsgID ::= ENUMERATED \{
+
+   reserved                    (0), 
+
+   alaCarteMessage             (1),
+
+   basicSafetyMessage          (2), 
+
+   commonSafetyRequest         (3),
+
+   emergencyVehicleAlert       (4),
+
+   genericTransferMsg          (5),
+
+   probeVehicleData            (6),
+
+   mapFragment                 (7),
+
+   aNMEAcorrections            (8),
+
+   aRTCMcorrections            (9),
+
+   aSPAT                       (10),
+
+   ... -- \# LOCAL\_CONTENT
+
+   \} 
+
+-- values to 127 reserved for std use
+
+Data Element : DE\_DSecond
+
+Use : The DSRC style second is a simple value consisting of integer values from zero to 60000 representing the milliseconds within a minute.  A leap second is represented by the value 60000.  The value of 65535 SHALL represent an unknown value in the range of the minute; other values from 60001 to 65534 are reserved. 
+
+ASN.1 Representation : 
+
+DSecond ::= INTEGER (0..65535) -- units of miliseconds
+
+Data Element : DE\_TemporaryID
+
+Use : This is the 6 byte random MAC/IP address, called the temporary ID, since the MAC address is randomly generated at various times according to a timer, or vehicle start-up, or possibly other events.  In essence, the MAC value for a mobile OBU device (unlike a typical wireless or wired 802 device) will periodically change to ensure the overall anonymity of the vehicle.  Because this value is used as a means to identify the local vehicles that are interacting during an encounter, it is used in the message set.
+
+ASN.1 Representation : 
+
+TemporaryID : = OCTET STRING (SIZE[6]) -- a 6 byte string array
+
+Data Element : DE\_PositionMotionBlob
+
+Use : The PositionMotionBlob is a 21 byte implicit encoding of other data elements defined in this standard.  It is defined as a single blob (no internal tagging is used) to allow concise and dense data transfer when sent in ASN DER form.  It is used when 3D position and motion must be encoded.  When sent in XML form, the encoding shall be as defined here or as defined for the individual elements using the definition and style defined for them in this standard.
+
+ASN.1 Representation : 
+
+PositionMotionBlob ::= OCTET STRING (SIZE(21)) 
+
+-- the contents of which shall be as follows  
+
+-- pos      PositionLocal3D,
+
+     -- lat         Latitude,             -- 4 bytes (1/8th micro degrees)
+
+     -- long        Longitude,            -- 4 bytes
+
+     -- elev        Elevation,            -- 2 bytes
+
+-- motion Motion,
+
+     -- speed       Speed,                -- 2 bytes
+
+     -- heading     Heading,              -- 2 byte
+
+Data Element : DE\_Heading
+
+Use : The current heading of the vehicle, expressed in signed units of 0.005493247 degrees from North (such that 65,535 such degrees represent 360 degrees).  North shall be defined as the axis defined by the WSG-84 coordinate system and its reference ellipsoid.  Headings "to the east" are defined as the positive direction.  À 2 byte value.
+
+ASN.1 Representation : 
+
+Heading : : = INTEGER (0.. 65535) -- LSB of 0.00549 degrees
+
+Data Frame : DF\_AccelerationSet4Way
+
+Use : A set of acceleration values in 3 orthogonal directions of the vehicle and with yaw rotation rate.
+
+ASN.1 Representation : 
+
+AccelerationSet4Way :: = SEQUENCE \{
+
+   long ,          -- Along the Vehicle Longitudinal axis
+
+   lat  ,          -- Along the Vehicle Lateral axis
+
+   vert ,  -- Along the Vehicle Vertical axis
+
+   yaw  
+
+   \}
+
+Data Element : DE\_Acceleration
+
+Use : A data element representing the signed acceleration of the vehicle along some known axis in units of 0.01 meters per second squared.  A range of over 2Gs is supported.  Accelerations in the directions of forward and to the right are taken as positive.   À 2 byte long value when sent. 
+
+Longitudinal acceleration is the acceleration along the X axis or the vehicle's direction of travel in parallel with a front to rear centerline.  Negative values indicate braking action.  
+
+Lateral acceleration is the acceleration along the Y axis or perpendicular to the vehicle's direction of travel in parallel with a left-to right centerline.   Negative values indicate left turning action and positive values indicate right-turning action. 
+
+ASN.1 Representation : 
+
+Acceleration ::= INTEGER (-2000..2000) -- LSB units are 0.01 m/s\^{} 2
+
+Data Element : DE\_VerticalAcceleration
+
+Use : A data element representing the signed vertical acceleration of the vehicle along the vertical axis in units of 0.080 meters per second squared.  This provides a range of over 1G in each direction in a one byte value.  
+
+ASN.1 Representation : 
+
+VerticalAcceleration ::= INTEGER (-127..127) -- LSB units are 0.080 m/s\^{} 2
+
+Data Element : DE\_YawRate
+
+Use : The Yaw Rate of the vehicle, a signed value (to the right being positive) and expressed in 0.01 degrees per second.  The "Yaw Rate" Probe Data Element is used in conjunction with the "Yaw Rate Confidence" Probe Data Element to inform Probe Data Users on the amount of a vehicle's rotation about it's longitudinal axis within a certain time period at the time a Probe Data snapshot was taken.  The Yaw Rate Element reports the vehicle's rotation in degrees per second with the Yaw Rate Confidence Element providing additional information on the coarseness of the Yaw Rate element also in degrees per second
+
+ASN.1 Representation: 
+
+YawRate ::= INTEGER (0..65535) -- LSB units of 0.01 degrees per second
+
+Data Element : DE\_Latitude
+
+Use : The geographic latitude of a node, expressed in 1/8th integer microdegrees, as a 32 bit value and with reference to the horizontal datum specified by horizontalDatum.
+
+ASN.1 Representation : 
+
+Latitude : : = INTEGER (720 000 000.. 720000000)  
+
+-- in LSB = 1/8 micro degree
+
+Data Element : DE\_Longitude
+
+Use : The geographic longitude of a node, expressed in 1/8th integer microdegrees, as a 32 bit value and  with reference to the horizontal datum specified by horizontalDatum.
+
+ASN.1 Representation : 
+
+Longitude : : = INTEGER (1 440 000 000.. 1440000000)  
+
+-- in LSB = 1/8 micro degree
+
+Data Element : DE\_Elevation
+
+Use : Elevation, a value of 2 bytes expressed in meters above the reference ellipsoid.(unsigned), offset by 1 km (value of 0 = 1km below the reference ellipsoid), and with an LSBit of 0.1 meter.  Note that the offset is not part of the value range transmitted.  Note that this element is 3 bytes in length.
+
+Rework this to use the other def that is 2 bytes long  
+
+ASN.1 Representation : 
+
+Elevation ::= INTEGER (0..65535) -- 10 cm LSB with a 1Km neg offset
+
+Data Frame : DF\_BrakeSystemStatus
+
+Use : A single byte long data frame combining multiple related bit fields into one byte.
+
+ASN.1 Representation : 
+
+BrakeSystemStatus ::= SEQUENCE \{
+
+   wheelBrakes        ,
+
+                      -- 4 bits
+
+   traction           ,
+
+                      -- 2 bits
+
+   abs                
+
+                      -- 2 bits
+
+   \}
+
+Data Element : DE\_BrakeAppliedStatus
+
+Use : A bit string enumerating the status of various brake systems (different wheels) of the vehicle.  Brake applied status indicates when vehicle braking has occurred.  This may be used by traffic management centers to determine that an incident or congestion may be present.  It is possible for some vehicles to provide an indication of how hard the braking action is but at this time only an indication that braking has occurred is used.
+
+ASN.1 Representation : 
+
+BrakeAppliedStatus : : = BIT STRING \{
+
+   allOff      (0), -- B'0000 The condition All Off 
+
+   leftFront (1), -- B » 0001 Left Front Active
+
+   leftRear    (2), -- B » 0010 Left Rear Active
+
+   rightFront (4), -- B' 0100 Right Front Active
+
+   rightRear (8), -- B' 1000  Right Rear Active
+
+   allOn       (15) -- B'1111 The condition All On
+
+   \} -- to fit in 4 bits
+
+Data Element : DE\_TractionControlState
+
+Use : The status of the vehicle traction system.  The "Traction Control Status" Probe Data Element is intended to inform Probe Data Users whether one or more of the vehicle's drive wheels was slipping during an acceleration at the time the Probe Data snapshot was taken.  The element informs the user if the vehicle is NOT equipped with a traction control system.  If the vehicle is equipped with a traction control system, the element reports whether the system is in an Off, On or Engaged state.
+
+ASN.1 Representation : 
+
+TractionControlState ::= ENUMERATED \{
+
+   notEquipped (0), -- B'00  Not Equipped 
+
+   off         (1), -- B » 01  Off
+
+   on          (2), -- B » 10  On
+
+   engaged     (3) -- B'11 Engaged
+
+   \} 
+
+Data Element: DE\_AntiLockBrakeStatus
+
+Use:  This data element reflects the current state of the Anti-Lock Brake systems status.  The "Anti-Lock Brake Status" Probe Data Element is intended to inform Probe Data Users as to whether or not the vehicles Anti-Lock Brake system was engaged/activated at the time the Probe Data snapshot was taken.  The element merely indicates "Engaged" or "Not Engaged".  An engaged/activated Anti-Lock Brake System could indicate an extreme braking condition or a slippery roadway condition.  An engaged/activated Anti-Lock Brake system triggers the vehicle's Probe Data system to take a snapshot of all vehicle Probe Data elements.
+
+ASN.1 Representation : 
+
+AntiLockBrakeStatus ::= ENUMERATED \{
+
+   notEquipped (0), -- B'00  Not Equipped 
+
+   off         (1), -- B » 01  Off
+
+   on          (2), -- B » 10  On
+
+   engaged     (3) -- B'11 Engaged
+
+   \} 
+
+Data Element: DE\_SteeringWheelAngle
+
+Use:  The angle of the steering wheel, expressed in a signed (to the right being positive) value with units of 0.02 degrees.
+
+ASN.1 Representation : 
+
+SteeringWheelAngle ::= INTEGER (32 767..32768) 
+
+-- LSB units of 0.02 degrees.  
+
+-- a range of 655.36 degrees each way
+
+Data Element : DE\_ThrottlePosition
+
+Use : The position of the throttle in the vehicle, expressed in units of 0.5 percent of range of travel, unsigned.
+
+ASN.1 Representation : 
+
+ThrottlePosition ::= INTEGER (0..200) -- LSB units are 0.5 percent
+
+Data Element : DE\_ExteriorLights
+
+Use : The status of various exterior lights encoded in a bit string which can be used to relate the current vehicle settings.
+
+The "Vehicle Exterior Lights" Probe Data Element provides the status of all exterior lights on the vehicle.  As currently defined, these are: parking lights, headlights (lo and hi beam, automatic light control), fog lights, daytime running lights, turn signals (right / left) and hazard signals.  Should the need for additional types of light be needed, a new data element will be added. 
+
+ASN.1 Representation : 
+
+ExteriorLights : : = BIT STRING \{   
+
+   allLightsOff               (0), -- B » 0000-0000  
+
+   lowBeamHeadlightsOn        (1), -- B » 0000-0001
+
+   highBeamHeadlightsOn       (2), -- B » 0000-0010
+
+   leftTurnSignalOn           (4), -- B » 0000-0100
+
+   rightTurnSignalOn          (8), -- B » 0000-1000
+
+   hazardSignalOn            (12), -- B » 0000-1100
+
+   automaticLightControlOn (16), -- B » 0001-0000
+
+   daytimeRunningLightsOn    (32), -- B » 0010-0000
+
+   fogLightOn                (64), -- B » 0100-0000
+
+   parkingLightsOn          (128) -- B » 1000-0000
+
+   \} -- to fit in 8 bits
+
+Data Frame : DF\_VehicleSize
+
+Use : The VehicleSize is a data frame representing the vehicle length and vehicle width in a three byte value.  
+
+ASN.1 Representation : 
+
+VehicleSize : : = SEQUENCE \{
+
+   width     ,
+
+   length    
+
+   \}  -- 3 bytes in length
+
+Data Element: DE\_VehicleLength
+
+Use:  The length of the vehicle expressed in centimeters, unsigned.  Note that this is a 14 bit value and it is combined with a 10 bit value to form a 3 byte data frame. When sent alone it shall occupy 2 bytes with the upper two bits being set to zero. 
+
+ASN.1 Representation : 
+
+VehicleLength ::= INTEGER (0..16383) -- LSB units are 1 cm
+
+Data Element : DE\_VehicleWidth
+
+Use : The width of the vehicle expressed in centimeters, unsigned.  Note that this is a 10 bit value and it is combined with a 14 bit value to form a 3 byte data frame. When sent alone it shall occupy 2 bytes with the upper six bits being set to zero. The width shall  be the widest point of the vehicle with all factory installed equipment. 
+
+ASN.1 Representation : 
+
+VehicleWidth ::= INTEGER (0..1023) -- LSB units are 1 cm
+
+Bibliographie
+
+[1] Les statistiques sur La mortalité routière dans le monde — http://www.planetoscope.com/mortalite/1270-mortalite---morts-d-accidents-de-la-route dans-le-monde.html
+
+[2] Wikipedia — 
+
+[3] ESTI -
+
+[4] Livre VANET — Vehicular Applications and InterNetworking Technologies — Hannes Hartenstein (Editor), Kenneth Laberteaux (Editor)
+
+[5] 
+
+[6]
+
+[7] Université Lyon 1 — 
+
+[8] « FCC Report and Order 03-324: Amendment of the Commission’s Rules Regarding Dedicated Short-Range Communication Services in the 5.850-5.925 GHz Band,” December 17, 2003.
+
+[9] « FCC Report and Order 06-110: Amendment of the Commission’s Rules Regarding Dedicated Short-Range Communication Services in the 5.850-5.925 GHz Band,” July 20, 2006.
+
+[10] Dedicated Short-Range Communications (DSRC) Standards in the United States IEEE and SAE Standards for Wireless Access in Vehicular Environments (WAVE), most of which have been published in the past 12 months, are described in detail in this paper. By John B. Kenney, Member IEEE
+
+[11] BER Encoging — 
+
+[12] IEEE Std 1609™.2-2013(Revision ofIEEE Std 1609.2-2006) “IEEE Standard for Wireless Access in Vehicular Environments—Security Services for Applications and Management Messages” Sponsor Intelligent Transportation Systems Committee of the IEEE Vehicular Technology Society Approved 6 February 2013 IEEE-SA Standards Board.
+
+[13] Security in Vehicular Ad Hoc Networks / Xiaodong Lin, Rongxing Lu, Chenxi Zhang, Haojin Zhu, Pin-Han Ho, and Xuemin (Sherman) Shen, University of Waterloo
+
+[14] DESIGN OF 5.9 GHZ DSRC-BASED VEHICULAR SAFETY COMMUNICATION: Daniel Jiang, Vikas Taliwal, Andreas Meier, and Wieland Holfelder,Daimlerchrysler research and technology north America, Inc.Ralf Herrtwich, Daimlerchrysler AG
+
+[15] Automotive Security: Cryptography for Car2X Communication Dr. Torsten Schütze\_Rohde \& Schwarz SIT GmbHHemminger Str. 4170499 Stuttgart, GermanyMarch 1, 2011
+
+[16] IEEE Standard for Message Sets for Vehicle/Roadside Communications Sponsor Rail Transit Vehicle Interface Standards Committee of the IEEE Vehicular Technology Society Reaffirmed 7 June 2006Approved 26 June 1999 IEEE-SA Standards Board
+
+[17] NIST. Announcing the secure hash standard. Federal Information Processing Satndards   Publication 180-2, August 2002.
+
+[18] FIPS Publication 180-2 (dated August 1, 2002), was superseded on February 25, 2004 and is provided here only for historical purposes.  For the most current revision of this publication, see : .
+
+[19] Digital Signature Standard. National Institute of Standards and Technology. Federal Information Processing Standards Publication 186-2.
+
+[20] Secure Hash Standard. National Institute of Standards and Technology. Federal Information Processing Standards Publication 180-2, 
+
+[21] WIKIPEDIA : 
+
+[22] Advanced Encryption Standard, http://csrc.nist.gov, 2002.
+
+[23] Implementation of the SHA-2 Hash Family Standard
+
+Using FPGAs N. SKLAVOS  O. KOUFOPAVLOU Electrical and Computer Engineering Department, University of Patras, Patras, Greece
+
+[24] VLSI IMPLEMENTATION OF THE KEYED-HASH MESSAGE AUTHENTICATION CODE FOR THE WIRELESS APPLICATION PROTOCOL G. Selimis, N. Sklavos and 0. Koufopavlou.Electrical and Computer Engineering DepartmentUniversity of Patras, Patras GREECE
+
+[25] K.K. Parhi: VLSI Digital Signal Processing Systems: Design and Implementation. Weley (1999) 43–61 and 119–140.
+
+[26] L. Dadda, M. Macchetti and J. Owen : An ASIC design for a high speed implementation
+
+of the hash function SHA-256 (384, 512). ACM Great Lakes Symposium on
+
+VLSI (2004) 421–425
+
+[27] L. Dadda, M. Macchetti and J. Owen : The design of a high speed ASIC unit for
+
+the hash function SHA-256 (384, 512). Proceedings of the conference on Design,
+
+Automation and Test in Europe (DATE’04). IEEE Computer Society (2004) 70-75
+
+[28] An ASIC Design for a High Speed Implementation of the Hash Function SHA256 (384, 512) Luigi DaddaPolitecnico di MilanoMilan, Italy;ALaRIUSILugano, SwitzerlandMarco MacchettiPolitecnico di MilanoMilan, Italy; Jeff OwenSTMicroelectronics NVManno, Switzerland
+
+[29] SURFACE VEHICLE STANDARD/DRAFT SAE J2735 DEDICATED SHORT RANGE COMMUNICATIONS (DSRC) MESSAGE SET DICTIONARY, Prepared for use by the DSRC committee of the SAE by SubCarrier Systems Corp (SCSC). Copyright 2008, Society of Automotive Engineers () www.SAE.org/to\_be\_determined  An internally developed product of SCSC.  Part of the www.ITSware.net tool system. A copyright assignment to the SDO replaces these lines when balloted.
+
+[30] DSRC Implementation Guide / A guide to users of SAE J2735 message sets over DSRC.
+

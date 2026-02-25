@@ -1,0 +1,397 @@
+
+\chapter{Chapitre 4}
+
+\textbf{\Large Conception et Implémentation de SHA-256 sur FPGA}
+
+Introduction
+
+  Les codes générés à partir d’algorithme de hachage sécurisé SHA-256 sont couramment utilisés pour la signature numérique et d’authentification de message. Il est utilisé dans le contexte de DSRC message, type Basic Safety Message défini dans la norme IEEE 1609.2 pour sécuriser les communications. L’implémentation hardware de cet algorithme cryptographique peut augmenter sur la vitesse de signature numérique des messages de sécurités de base BSM, donc le débit de transmission.
+
+Le chemin de données de SHA-256
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image26.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.1: Structure du chemin de données de SHA-256
+
+  Le chemin de donnée de SHA-256 comporte deux unités de calcul itératives, le compresseur et l’unité d’expansion (Expander). Il est constitué aussi de deux mémoires ROM contenants les constantes d’algorithme utilisé dans le calcul de condensat. Il existe des registres dans le chemin de donnée pour stocker les valeurs intermédiaires. Un multiplexeur est indispensable dans la sélection des vecteurs de hachages intermédiaires pour les messages multi-blocs et pour initialiser le compresseur dans la première itération. Un autre multiplexeur sélectionne le vecteur initial pour s’additionner à la sortie de compresseur avant le 64 éme itération et sélectionne le vecteur de hachage intermédiaire dans le cas de message multi-blocs [23] [24].
+
+DFG de base de Compresseur et d’Unité d’expansion de SHA-256
+
+ Depuis le schéma d’une itération de compresseur de SHA-2, l’ordre des opérations d’addition n’affecte pas sur les résultats, il y a plusieurs DFG (Data Flow Graph) possibles. Par exemple (a+b)+c et (b+c)+a sont équivalentes en mathématiques, mais auront différente DFG. Comme point de départ, on choisit, le DFG ayant la minimale « iteration  bound », les transformations sont ensuite effectuées pour trouver l’architecture qui permet d’atteindre cette borne. Pour le compresseur SHA-2, puisqu’il n’y a que 7 additionneurs, trouver un DFG qui avoir « l’itération bound » minimale n’est pas difficile tant que nous comprenons comment calculer l’itération bound [25] [26].
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image27.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.2: DFG de base de compresseur
+
+  Le DFG dans la figure. 18 est le DFG de base de compresseur. La boucle ombragée indique la boucle ayant le plus grand temps de propagation entre deux registres et donne l’itération bound. L’iteration bound utile pour le calcul de la fréquence maximale de fonctionnement  
+
+Et ;
+
+ : Délai de propagation d’additionneur.
+
+ : Délai de propagation de composant Choice (Ch).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image28.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.3: DFG de base d’unité d’expansion
+
+ : Délai de propagation d’additionneur.
+
+ : Délai de propagation de composant Sigma\_0 ().
+
+  Nous avons décrit les DFG des modules de base d’algorithme SHA -256. Nous avons considérais que la mise en œuvre d’unité d’expansion (Expander) et de compresseur (Compressor). Bien que le dispositif d’expansion puisse être effectué avant le compresseur, nous avons choisi de mettre en œuvre pour effectuer de manière dynamique lors de la compression, afin d’augmenter le débit global et de réduire l’air des portes logiques lors d’implémentation.
+
+
+\subsubsection{   1.2 Augmentation de fréquence d’horloge de compresseur et d’unité d’expansion}
+  La première étape est d’obtenir un circuit pour l’unité d’expansion avec une fréquence de travail haute.
+
+Le circuit consommé :
+
+• Au début 16 cycles d’horloge (0 ≤j < 16) pour le mot de 32 bits Wj = Mj chacun compose un bloc de message.
+
+• Au suivant 48 cycles d’horloge (16 ≤ j < 64) pour la fonction :
+
+Avec ;  représente l’addition modulo.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image29.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.4: DFG de compresseur de SHA-256 optimisé
+
+Le chemin critique d’unité d’expansion est :
+
+ : Délai de propagation d’additionneur.
+
+ : Délai de propagation de composant Choice (Ch).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image30.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.5: DFG de compresseur de SHA-256 optimisé avec CSA (Carry Save Adder)
+
+  Nous avons supposé que toute opération dans le DFG ne peut pas être fusionné ou divisé en d’autres opérations, l’iteration bound de SHA2 de figure précédant. Toutefois, si nous sommes autorisés à utiliser un Carry Cave Adder (CSA), nous pouvons remplacer deux additionneurs consécutifs avec un CSA et un additionneur. Depuis CSA exige moins de temps de propagation d’une addition, nous avons remplacé les additionneurs avec CSA ou si c’est possible. Le DFG qui en résulte est représenté sur cette figure. Notez que certains des additionneurs ne sont pas remplacés par CSA, car cela augmenterait l’iteration bound. Par conséquent, la dernière iteration bound est comme suit :
+
+: Délai de propagation de Carry Save Adder.
+
+ : Délai de propagation d’additionneur.
+
+ : Délai de propagation de composant Choice (Ch).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image31.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.6: DFG final de compresseur de SHA-256 avec transformation de retiming
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image32.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.7: DFG de SHA-256 d’unité d’expansion avec CSA (Carry Save Adder)
+
+: Délai de propagation de Carry Save adder.
+
+ : Délai de propagation d’additionneur.
+
+ : Délai de propagation de composant Sigma\_0 ().
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image33.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.8: DFG de SHA-256 d’unité d’expansion avec transformation de retiming
+
+Partie Contrôle
+
+Conception de Contrôleur
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image34.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.9: Contrôleur de SHA-256 avec VIVADO RTL Viewer
+
+  Dans le design de SHA-256 la partie chemin de donnée est le responsable d’opérations de traitement et de calcul de données. Cette partie est contrôlée par un contrôleur qui générer tous les signaux nécessaires à faire fonctionner le design comme il faut. 
+
+  Dans notre cas, la partie contrôle compose de deux composants ; un compteur (Counter) pour synchroniser les états de fonctionnement, et une Machine d’état fini (FSM) qui change les signaux de contrôle selon l’état de système. 
+
+Machine d’état fini d’un bloc SHA-256
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image35.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.10: FSM de SHA-256 pour un seul bloc de message
+
+Tableau 4.1 : Les différents signaux générés par le contrôleur de SHA-256 Seul Block
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline & État 0 & État 1 & État 2 & État 3 & État 4 & État 5 \\
+\hlineStart\_count & 0 & 1 & 0 & 0 & 0 & 0 \\
+\hlinerst\_count & 0 & 0 & 0 & 0 & 1 & 0 \\
+\hlinesel\_init & 0 & 0 & 0 & 0 & 1 & X \\
+\hlinesel\_Expender & 0 & 0 & 0 & 1 & 0 & X \\
+\hlinesel\_Compressor & 0 & 0 & 1 & 1 & 0 & X \\
+\hlinesel\_mux\_out & 0 & 0 & 0 & 0 & 0 & X \\
+\hlineena\_init & 0 & 1 & 1 & 1 & 0 & X \\
+\hlineena\_out & 0 & 0 & 0 & 0 & 1 & 0 \\
+\hlineena\_ready & 1 & 1 & 0 & 0 & 0 & X \\
+\hlineena\_Compress-Reg & 0 & 0 & 1 & 1 & 1 & X \\
+\hlineready\_tmp & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image36.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.11: Simulation d’un message avec un seul bloc de hachage
+
+  Le message utilisé dans la simulation est la suite de caractères « abc » en hexadécimale « 616263 », le message est complété en ajoutant un « 1 », suivi par 423 bits « 0 », et se terminant par la valeur hexadécimale 00000000 00000018 (les deux de mot de 32 bits représentent la longueur de message en hexadécimale, 24). Ainsi, le message rembourré final est constitué d’un bloc (N = 1). Après prétraitement de message (Preprocessing) le bloc d’entrée est :
+
+ = \{ 61626380, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000018\}
+
+Machine d’état fini de multi-Bloc SHA-256
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image37.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.12: FSM de SHA-256 pour messages multi-bloc
+
+Tableau 4.2 : Les différents signaux générer par le contrôleur de SHA-256 multi-Bloc
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline & État 0 & État 1 & État 2 & État 3 & État 4 & État 5 & État 6 & État 7 & État 8 & État 9 & État 10 \\
+\hlineStart\_count & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & X \\
+\hlinerst\_count & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hlinesel\_init & 0 & 0 & 0 & 0 & 1 & 1 & 1 & X & 0 & 0 & 1 \\
+\hlinesel\_Expender & 0 & 0 & 0 & 1 & 0 & 0 & 0 & X & 0 & 1 & 1 \\
+\hlinesel\_Compressor & 0 & 0 & 1 & 1 & 0 & 0 & 0 & X & 1 & 1 & 0 \\
+\hlinesel\_mux\_out & 0 & 0 & 0 & 0 & 0 & 0 & 1 & X & 0 & 1 & 1 \\
+\hlineena\_init & 0 & 1 & 1 & 1 & 0 & 1 & 1 & X & 1 & 1 & 0 \\
+\hlineena\_out & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hlineena\_ready & 1 & 1 & 0 & 0 & 0 & 0 & 0 & X & 0 & 0 & 0 \\
+\hlineena\_Compress-Reg & 0 & 0 & 1 & 1 & 1 & 1 & 1 & X & 1 & 1 & 1 \\
+\hlineready\_tmp & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image38.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.13: Simulation d’un message avec multi-bloc de hachage
+
+  Le message utilisé dans la simulation est la suite de caractères » abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq » en hexadécimale « 61 626 364 62 636 465 63 646 566 64 656 667 65 666 768 66 676 869 6768696a 68696a6b 696a6b6c 6a6b6c6d 6b6c6d6e 6c6d6e6f   6d6e6f70 6e6f7071 ». Le message est complété en ajoutant un « 1 », suivit par 511bits « 0 », et se terminant parla valeur hexadécimale00000000000001c0 (les deux de mot de 32 bits représentent la longueur de message en hexadécimale, 448). Ainsi, le message rembourré final est constitué de deux blocs (n = 2). Après prétraitement de message (Preprocessing) les blocs d’entrées sont :
+
+ = \{ 61626364, 62636465, 63646566, 64656667, 65666768, 66676869, 6768696a, 68696a6b, 696a6b6c, 6a6b6c6d, 6b6c6d6e, 6c6d6e6f, 6d6e6f70, 6e6f7071, 80 000 000, 00000000\}
+
+ = \{00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 000001c0\}
+
+Implémentation sur FPGA
+
+  Pour l’étape d’implémentation, nous avons utilisé plusieurs outils soit pour la conception, la simulation et l’implémentation. 
+
+  À la phase de conception, nous avons utilisé XILINX ISE 14.  Le Langage de description matérielle utiliser est le VHDL. La deuxième phase est la simulation, deux outils qui nous avons utilisé, Isim de XILINX et Modelsim d’Altera. La dernière étape est l’implémentation, nous avons fait par le Synthèse XST de XILINX ISE 14. La carte utilisée pour l’implémentation est le XILINX SPARTAN 3E.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image39.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.14: SHA-256 RTL View sous XILINX ISE
+
+Conception de compresseur de SHA-256
+
+  Le Compresseur est une partie itérative de design de SHA-256. Il consomme le plus de temps dans opération de calcule de condensat du message. De plus il comporte le chemin combinatoire le plus long au design dû à l’utilisation de 7 additionneurs et les fonctions utiliser dans l’algorithme de hachage.
+
+  Dans le design principal, l’outil de synthèse de XILINX ISE  (XST) généré des additionneurs qui utiliser par défaut par l’outil. Alors, nous pouvons optimiser le DFG de Compresseur par l’utilisation d’autres types d’additionneurs dans le design tel que : 
+
+  L’additionneur avec la sélectionne du reste (Carry Select Adder), L’additionneur avec la sauvegarde du reste (Carry Save Adder), l’additionneur avec préfixe parallèle (Parallel Prefix Adder)…
+
+  Autre méthode utiliser pour l’optimisation des DFG dans le DSP design est le « Retiming », qui nous pouvons le profiter dans l’étape d’optimisation.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image40.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.15: RTL de compresseur de SHA-2
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image41.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.16 : Fonction « Choice » générée par VIVADO  RTL Viewer
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image42.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.17: Fonction « Major » générée par VIVADO  RTL Viewer
+
+Tableau 4.3 : Sommaire de Synthèse de Compresseur de SHA-2
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline & HDL Synthesis Report & Timing Summary : --------- Speed Grade : -5 --------- &  &  \\
+\hline &  & Minimum Period/Frequency & Minimum input arrival time before clock & Maximum output required time after clock \\
+\hlineDesign Principal & \#Adders : 7                            32-bit adder : 7 \# Registers    : 1  256-bit register : 1 \# Xors           : 4  32-bit xor2 : 1  32-bit xor3 : 3 Number of slices : 392 / 960 , 40 \% (Spartan3E) & 12.528ns/ 79.824 MHz & 13.855 ns & 4.182 ns \\
+\hlineDesign avec Carry Select Adder & Adders : 14                           32-bit adder : 14 \# Registers : 1  256-bit register : 1 \# Xors          : 4 32-bit xor2 : 1 32-bit xor3 : 3 Number of slices : 275 / 960 , 40 \% (Spartan3E) & 13.986ns/ 71.500 MHz & 15.379 ns & 4.134 ns \\
+\hlineDesign avec Carry Save Adder & \#Adders : 5                       32-bit adder : 5 \# Registers : 1  256-bit register : 1 \# Xors         : 132 1-bit xor3    : 128 32-bit xor2 : 1  32-bit xor3 : 3 Number of slices : 416 / 960 , 43 \% (Spartan3E) & 10.519ns/ 95.065 MHz & 12.188 ns & 4.134 ns \\
+\hlineDesign Retimed avec Carry Save Adder & \#Adders : 5 32-bit adder : 5 \# Registers : 6 256-bit register : 1 32-bit register : 5 \# Xors         : 132 1-bit xor3    : 128  32-bit xor2 : 1  32-bit xor3 : 3 Number of slices : 400 / 960 , 41 \% (Spartan3E) & 7.660ns/ 130.554 MHz & 9.050 ns & 4.221 ns \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+Nous avons constaté que le changement de l’additionneur générer par défaut par l’outil de synthèse par le « Carry Select Adder »  n’améliore que le temps nécessaire que le donne soit resté stable avant le front d’horloge (4.134 ns< 4.182 ns).
+
+Nous avons remarqué que le changement d’additionneur avec l’additionneur de typeCarry Save Adder améliore la fréquence de travail de Compresseur (95.065 MHz >79.824 MHz), de plus il diminue le temps nécessaire que le donne soit resté stable avant le front d’horloge (12.188 ns< 13.855 ns) et après le front d’horloge (4.134 ns < 4.182 ns).
+
+Après que nous avons mieux amélioré le DFG de Compresseur par faire une « Retiming Transformation » la fréquence augmenter de plus (130.554 MHz>95.065 MHz >79.824 MHz).
+
+Conception d’unité d’expansion de SHA-256
+
+  L’unité d’expansion (Expander) est la deuxième composante itérative de SHA-256. L’augmentation de fréquence de ce composant reflété directement sur la fréquence de travail de compresseur et de système global.
+
+ Il compose de 3 additionneurs et deux fonctions ; Sigma\_0 et Sigma\_1 dans le chemin combinatoire, alors optimisation de désign peut ce faire par plusieurs méthodes. Soit le changement d’additionneur par défaut par d’autres types d’additionneur, ou/et le faire une transformation dans le DFG  de » Expander.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image43.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 4.18: Unité d’expansion sous VIVADO RTL Viewer
+
+Tableau 4.4 : Sommaire de Synthèse Unité d’expansion de SHA-2
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline & HDL Synthesis Report & Timing Summary : --------- Speed Grade : -5 --------- &  &  \\
+\hline &  & Minimum Period/Frequency & Minimum input arrival time before clock & Maximum output required time after clock \\
+\hlineDesign Principal & \#Adders         : 3 32-bit adder : 3                          \# Registers    : 16 32-bit register : 16 \# Xors           : 2 32-bit xor3 : 2   Number of slices : 154 / 960 , 16 \% (Spartan3E) & 9.672ns/ 103.387 MHz & 3.211 ns & 4.063 ns \\
+\hlineDesign avec Carry Select Adder & \#Adders        : 6 32-bit adder : 6 \# Registers    : 16 32-bit register : 16 \# Xors           : 2 32-bit xor3 : 2  Number of slices : 181 / 960 , 18 \% (Spartan3E) & 10.940 ns/ 91.411 MHz & 3.211 ns & 4.063 ns \\
+\hlineDesign avec Carry Save Adder & \#Adders : 1 32-bit adder : 1 \# Registers     : 16 32-bit register : 16 \# Xors            : 66 1-bit xor3     : 64 32-bit xor3 : 2  Number of slices : 163 / 960 , 16 \% (Spartan3E) & 8.452 ns/ 118.317 MHz & 3.211 ns & 4.063 ns \\
+\hlineDesign Retimed avec Carry Save Adder & \#Adders : 1                          32-bit adder : 1 \# Registers    : 17 32-bit register : 17 \# Xors           : 66 1-bit xor3    : 64 32-bit xor3 : 2  Number of slices : 177 / 960 , 18 \% (Spartan3E) & 5.550ns/ 180.180 MHz & 3.211 ns & 8.831 ns \\
+\hline\end{tabular}
+\caption{Table extracted}
+\end{table}
+Nous avons constaté que le changement d’additionneur avec l’additionneur de type Carry Save Adder améliore la fréquence de travail d’unité d’expansion (Expander) (118.317 MHz>103.387 MHz). L’utilisation le Carry Select Adder n’est pas évidente dans ce cas.
+
+Après que Nous avons mieux amélioré le DFG d’unité d’expansion (Expander) par faire une « Retiming Transformation » la fréquence augmenter de plus (180.180 MHz > 118.317 MHz> 103.387 MHz).
+
+Empreinte de message BSM avec SHA-256
+
+Il s’appelé aussi condensat ou digest.
+
+BSM formât simple :
+
+Message BSM simple =>
+
+02 01 00 EA 60 20 21 22 23 10 B0 76 00 39 38 70 00 27 10 00 00 00 88 13 88 40 00 00 00 00 00 00 00 00 FF F0 0D C2 9E
+
+SHA-256  
+
+40a2b7a73697066a32159496982864202417b0ab6c10d9c3aa4ed09c3102d01f
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image44.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 109: Résultat de simulation d’un condensat de message BSM simple en SHA-256
+
+  Nous avons utilisé un outil qui calcule le SHA-256 pour vérifier l’exactitude de suite de chiffre générer. 
+
+Le digest générer lord de simulation de design est similaire au digest générer par l’outil pour le même message.  
+
+Format BER :
+
+Message BSM en format BER =>
+
+30 31 80 01 02 81 01 01 82 03 00 EA 60 63 04 20 21 22 23 84 1E 10 B0 76 00 39 38 70 00 27 10 00 00 00 88 13 88 40 00 00 00 00 00 00 00 00 FF F0 0 D C2 9E
+
+SHA-256  
+
+397f3af91298dab46265aad69ebbd2c8d4d2d6614dba6dcd3ddab8bdc0f1cf5f
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/image45.png}
+\caption{Image extracted}
+\end{figure}
+
+
+Figure 110: Résultat de simulation d’un condensat de BSM codé en BER en SHA-256
+
+  Pour la deuxième simulation, nous avons vérifié l’exactitude de suite de chiffre généré de message BSM en format BER. 
+
+Le digest générer lord de simulation de design est similaire au digest générer par l’outil pour le même message.  
+
