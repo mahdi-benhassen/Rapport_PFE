@@ -210,21 +210,22 @@ Tableau 4.2 : Les différents signaux générer par le contrôleur de SHA-256 
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
 \hline & État 0 & État 1 & État 2 & État 3 & État 4 & État 5 & État 6 & État 7 & État 8 & État 9 & État 10 \\
-\hlineStart\_count & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & X \\
-\hlinerst\_count & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
-\hlinesel\_init & 0 & 0 & 0 & 0 & 1 & 1 & 1 & X & 0 & 0 & 1 \\
-\hlinesel\_Expender & 0 & 0 & 0 & 1 & 0 & 0 & 0 & X & 0 & 1 & 1 \\
-\hlinesel\_Compressor & 0 & 0 & 1 & 1 & 0 & 0 & 0 & X & 1 & 1 & 0 \\
-\hlinesel\_mux\_out & 0 & 0 & 0 & 0 & 0 & 0 & 1 & X & 0 & 1 & 1 \\
-\hlineena\_init & 0 & 1 & 1 & 1 & 0 & 1 & 1 & X & 1 & 1 & 0 \\
-\hlineena\_out & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
-\hlineena\_ready & 1 & 1 & 0 & 0 & 0 & 0 & 0 & X & 0 & 0 & 0 \\
-\hlineena\_Compress-Reg & 0 & 0 & 1 & 1 & 1 & 1 & 1 & X & 1 & 1 & 1 \\
-\hlineready\_tmp & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
-\hline\end{tabular}
-\caption{Table extracted}
+\hline Start\_count & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & X \\
+\hline rst\_count & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hline sel\_init & 0 & 0 & 0 & 0 & 1 & 1 & 1 & X & 0 & 0 & 1 \\
+\hline sel\_Expender & 0 & 0 & 0 & 1 & 0 & 0 & 0 & X & 0 & 1 & 1 \\
+\hline sel\_Compressor & 0 & 0 & 1 & 1 & 0 & 0 & 0 & X & 1 & 1 & 0 \\
+\hline sel\_mux\_out & 0 & 0 & 0 & 0 & 0 & 0 & 1 & X & 0 & 1 & 1 \\
+\hline ena\_init & 0 & 1 & 1 & 1 & 0 & 1 & 1 & X & 1 & 1 & 0 \\
+\hline ena\_out & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\hline ena\_ready & 1 & 1 & 0 & 0 & 0 & 0 & 0 & X & 0 & 0 & 0 \\
+\hline ena\_Compress-Reg & 0 & 0 & 1 & 1 & 1 & 1 & 1 & X & 1 & 1 & 1 \\
+\hline ready\_tmp & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+\caption{Les différents signaux générés par le contrôleur de SHA-256 multi-Bloc}
 \end{table}
 \begin{figure}[h]
 \centering
@@ -297,15 +298,16 @@ Tableau 4.3 : Sommaire de Synthèse de Compresseur de SHA-2
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline & HDL Synthesis Report & Timing Summary : --------- Speed Grade : -5 --------- &  &  \\
-\hline &  & Minimum Period/Frequency & Minimum input arrival time before clock & Maximum output required time after clock \\
-\hlineDesign Principal & \#Adders : 7                            32-bit adder : 7 \# Registers    : 1  256-bit register : 1 \# Xors           : 4  32-bit xor2 : 1  32-bit xor3 : 3 Number of slices : 392 / 960 , 40 \% (Spartan3E) & 12.528ns/ 79.824 MHz & 13.855 ns & 4.182 ns \\
-\hlineDesign avec Carry Select Adder & Adders : 14                           32-bit adder : 14 \# Registers : 1  256-bit register : 1 \# Xors          : 4 32-bit xor2 : 1 32-bit xor3 : 3 Number of slices : 275 / 960 , 40 \% (Spartan3E) & 13.986ns/ 71.500 MHz & 15.379 ns & 4.134 ns \\
-\hlineDesign avec Carry Save Adder & \#Adders : 5                       32-bit adder : 5 \# Registers : 1  256-bit register : 1 \# Xors         : 132 1-bit xor3    : 128 32-bit xor2 : 1  32-bit xor3 : 3 Number of slices : 416 / 960 , 43 \% (Spartan3E) & 10.519ns/ 95.065 MHz & 12.188 ns & 4.134 ns \\
-\hlineDesign Retimed avec Carry Save Adder & \#Adders : 5 32-bit adder : 5 \# Registers : 6 256-bit register : 1 32-bit register : 5 \# Xors         : 132 1-bit xor3    : 128  32-bit xor2 : 1  32-bit xor3 : 3 Number of slices : 400 / 960 , 41 \% (Spartan3E) & 7.660ns/ 130.554 MHz & 9.050 ns & 4.221 ns \\
-\hline\end{tabular}
-\caption{Table extracted}
+\begin{tabular}{|l|p{4cm}|p{3cm}|p{2cm}|p{2cm}|}
+\hline & HDL Synthesis Report & Timing Summary & & \\
+\hline & & Minimum Period/Frequency & Minimum input arrival time before clock & Maximum output required time after clock \\
+\hline Design Principal & \#Adders: 7 \newline 32-bit adder: 7 \newline \# Registers: 1 \newline 256-bit register: 1 \newline \# Xors: 4 \newline 32-bit xor2: 1 \newline 32-bit xor3: 3 \newline Number of slices: 392 / 960 , 40\% (Spartan3E) & 12.528ns/ 79.824 MHz & 13.855 ns & 4.182 ns \\
+\hline Design avec Carry Select Adder & \#Adders: 14 \newline 32-bit adder: 14 \newline \# Registers: 1 \newline 256-bit register: 1 \newline \# Xors: 4 \newline 32-bit xor2: 1 \newline 32-bit xor3: 3 \newline Number of slices: 275 / 960 , 40\% (Spartan3E) & 13.986ns/ 71.500 MHz & 15.379 ns & 4.134 ns \\
+\hline Design avec Carry Save Adder & \#Adders: 5 \newline 32-bit adder: 5 \newline \# Registers: 1 \newline 256-bit register: 1 \newline \# Xors: 132 \newline 1-bit xor3: 128 \newline 32-bit xor2: 1 \newline 32-bit xor3: 3 \newline Number of slices: 416 / 960 , 43\% (Spartan3E) & 10.519ns/ 95.065 MHz & 12.188 ns & 4.134 ns \\
+\hline Design Retimed avec Carry Save Adder & \#Adders: 5 \newline 32-bit adder: 5 \newline \# Registers: 6 \newline 256-bit register: 1 \newline 32-bit register: 5 \newline \# Xors: 132 \newline 1-bit xor3: 128 \newline 32-bit xor2: 1 \newline 32-bit xor3: 3 \newline Number of slices: 400 / 960 , 41\% (Spartan3E) & 7.660ns/ 130.554 MHz & 9.050 ns & 4.221 ns \\
+\hline
+\end{tabular}
+\caption{Sommaire de Synthèse de Compresseur de SHA-2}
 \end{table}
 Nous avons constaté que le changement de l’additionneur générer par défaut par l’outil de synthèse par le « Carry Select Adder »  n’améliore que le temps nécessaire que le donne soit resté stable avant le front d’horloge (4.134 ns< 4.182 ns).
 
@@ -332,15 +334,16 @@ Tableau 4.4 : Sommaire de Synthèse Unité d’expansion de SHA-2
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline & HDL Synthesis Report & Timing Summary : --------- Speed Grade : -5 --------- &  &  \\
-\hline &  & Minimum Period/Frequency & Minimum input arrival time before clock & Maximum output required time after clock \\
-\hlineDesign Principal & \#Adders         : 3 32-bit adder : 3                          \# Registers    : 16 32-bit register : 16 \# Xors           : 2 32-bit xor3 : 2   Number of slices : 154 / 960 , 16 \% (Spartan3E) & 9.672ns/ 103.387 MHz & 3.211 ns & 4.063 ns \\
-\hlineDesign avec Carry Select Adder & \#Adders        : 6 32-bit adder : 6 \# Registers    : 16 32-bit register : 16 \# Xors           : 2 32-bit xor3 : 2  Number of slices : 181 / 960 , 18 \% (Spartan3E) & 10.940 ns/ 91.411 MHz & 3.211 ns & 4.063 ns \\
-\hlineDesign avec Carry Save Adder & \#Adders : 1 32-bit adder : 1 \# Registers     : 16 32-bit register : 16 \# Xors            : 66 1-bit xor3     : 64 32-bit xor3 : 2  Number of slices : 163 / 960 , 16 \% (Spartan3E) & 8.452 ns/ 118.317 MHz & 3.211 ns & 4.063 ns \\
-\hlineDesign Retimed avec Carry Save Adder & \#Adders : 1                          32-bit adder : 1 \# Registers    : 17 32-bit register : 17 \# Xors           : 66 1-bit xor3    : 64 32-bit xor3 : 2  Number of slices : 177 / 960 , 18 \% (Spartan3E) & 5.550ns/ 180.180 MHz & 3.211 ns & 8.831 ns \\
-\hline\end{tabular}
-\caption{Table extracted}
+\begin{tabular}{|l|p{4cm}|p{3cm}|p{2cm}|p{2cm}|}
+\hline & HDL Synthesis Report & Timing Summary & & \\
+\hline & & Minimum Period/Frequency & Minimum input arrival time before clock & Maximum output required time after clock \\
+\hline Design Principal & \#Adders: 3 \newline 32-bit adder: 3 \newline \# Registers: 16 \newline 32-bit register: 16 \newline \# Xors: 2 \newline 32-bit xor3: 2 \newline Number of slices: 154 / 960 , 16\% (Spartan3E) & 9.672ns/ 103.387 MHz & 3.211 ns & 4.063 ns \\
+\hline Design avec Carry Select Adder & \#Adders: 6 \newline 32-bit adder: 6 \newline \# Registers: 16 \newline 32-bit register: 16 \newline \# Xors: 2 \newline 32-bit xor3: 2 \newline Number of slices: 181 / 960 , 18\% (Spartan3E) & 10.940 ns/ 91.411 MHz & 3.211 ns & 4.063 ns \\
+\hline Design avec Carry Save Adder & \#Adders: 1 \newline 32-bit adder: 1 \newline \# Registers: 16 \newline 32-bit register: 16 \newline \# Xors: 66 \newline 1-bit xor3: 64 \newline 32-bit xor3: 2 \newline Number of slices: 163 / 960 , 16\% (Spartan3E) & 8.452 ns/ 118.317 MHz & 3.211 ns & 4.063 ns \\
+\hline Design Retimed avec Carry Save Adder & \#Adders: 1 \newline 32-bit adder: 1 \newline \# Registers: 17 \newline 32-bit register: 17 \newline \# Xors: 66 \newline 1-bit xor3: 64 \newline 32-bit xor3: 2 \newline Number of slices: 177 / 960 , 18\% (Spartan3E) & 5.550ns/ 180.180 MHz & 3.211 ns & 8.831 ns \\
+\hline
+\end{tabular}
+\caption{Sommaire de Synthèse Unité d’expansion de SHA-2}
 \end{table}
 Nous avons constaté que le changement d’additionneur avec l’additionneur de type Carry Save Adder améliore la fréquence de travail d’unité d’expansion (Expander) (118.317 MHz>103.387 MHz). L’utilisation le Carry Select Adder n’est pas évidente dans ce cas.
 
