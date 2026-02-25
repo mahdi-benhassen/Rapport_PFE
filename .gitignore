@@ -12,3 +12,5 @@
 *.pdf
 _minted*
 .DS_Store
+
+compilation_errors.txt
