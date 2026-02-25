@@ -12,13 +12,21 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{titlesec}
+\usepackage{parskip} % Adds space between paragraphs and removes indentation
+\usepackage{setspace} % For line spacing
+\usepackage{enumitem} % For better list formatting
+
 \geometry{
  a4paper,
  total={170mm,257mm},
- left=20mm,
- top=20mm,
+ left=25mm, % Increased left margin for binding
+ top=25mm,
+ right=25mm,
+ bottom=25mm,
 }
 \graphicspath{{images/}}
+
+\onehalfspacing % Set 1.5 line spacing for better readability
 
 \title{Rapport PFE}
 \author{Ben Hassen Mahdi}
@@ -26,13 +34,12 @@
 
 \begin{document}
 
-\maketitle
+\include{frontmatter}
 
 \tableofcontents
 \listoffigures
 \listoftables
 
-\include{frontmatter}
 \include{introduction}
 \include{chapter1}
 \include{chapter2}

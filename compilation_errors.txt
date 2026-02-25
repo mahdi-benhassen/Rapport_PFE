@@ -1,8 +1,8 @@
-1m 34s
+1m 22s
 Run xu-cheng/latex-action@v3
 Run "${GITHUB_ACTION_PATH}/action.sh"
 ::stop-commands::***
-'docker' 'run' '--rm' '-e' 'BIBINPUTS' '-e' 'BSTINPUTS' '-e' 'MFINPUTS' '-e' 'TEXINPUTS' '-e' 'TFMFONTS' '-e' 'HOME' '-e' 'INPUT_ROOT_FILE' '-e' 'INPUT_WORKING_DIRECTORY' '-e' 'INPUT_WORK_IN_ROOT_FILE_DIR' '-e' 'INPUT_CONTINUE_ON_ERROR' '-e' 'INPUT_COMPILER' '-e' 'INPUT_ARGS' '-e' 'INPUT_EXTRA_SYSTEM_PACKAGES' '-e' 'INPUT_EXTRA_FONTS' '-e' 'INPUT_PRE_COMPILE' '-e' 'INPUT_POST_COMPILE' '-e' 'INPUT_LATEXMK_SHELL_ESCAPE' '-e' 'INPUT_LATEXMK_USE_LUALATEX' '-e' 'INPUT_LATEXMK_USE_XELATEX' '-e' 'INPUT_TLMGR_REPO' '-e' 'GITHUB_JOB' '-e' 'GITHUB_REF' '-e' 'GITHUB_SHA' '-e' 'GITHUB_REPOSITORY' '-e' 'GITHUB_REPOSITORY_OWNER' '-e' 'GITHUB_REPOSITORY_OWNER_ID' '-e' 'GITHUB_RUN_ID' '-e' 'GITHUB_RUN_NUMBER' '-e' 'GITHUB_RETENTION_DAYS' '-e' 'GITHUB_RUN_ATTEMPT' '-e' 'GITHUB_REPOSITORY_ID' '-e' 'GITHUB_ACTOR_ID' '-e' 'GITHUB_ACTOR' '-e' 'GITHUB_TRIGGERING_ACTOR' '-e' 'GITHUB_WORKFLOW' '-e' 'GITHUB_HEAD_REF' '-e' 'GITHUB_BASE_REF' '-e' 'GITHUB_EVENT_NAME' '-e' 'GITHUB_SERVER_URL' '-e' 'GITHUB_API_URL' '-e' 'GITHUB_GRAPHQL_URL' '-e' 'GITHUB_REF_NAME' '-e' 'GITHUB_REF_PROTECTED' '-e' 'GITHUB_REF_TYPE' '-e' 'GITHUB_WORKFLOW_REF' '-e' 'GITHUB_WORKFLOW_SHA' '-e' 'GITHUB_WORKSPACE' '-e' 'GITHUB_ACTION' '-e' 'GITHUB_EVENT_PATH' '-e' 'GITHUB_ACTION_REPOSITORY' '-e' 'GITHUB_ACTION_REF' '-e' 'GITHUB_PATH' '-e' 'GITHUB_ENV' '-e' 'GITHUB_STEP_SUMMARY' '-e' 'GITHUB_STATE' '-e' 'GITHUB_OUTPUT' '-e' 'RUNNER_OS' '-e' 'RUNNER_ARCH' '-e' 'RUNNER_NAME' '-e' 'RUNNER_ENVIRONMENT' '-e' 'RUNNER_TOOL_CACHE' '-e' 'RUNNER_TEMP' '-e' 'RUNNER_WORKSPACE' '-e' 'ACTIONS_RUNTIME_URL' '-e' 'ACTIONS_RUNTIME_TOKEN' '-e' 'ACTIONS_CACHE_URL' '-e' 'GITHUB_ACTIONS=true' '-e' 'CI=true' '-v' '/var/run/docker.sock:/var/run/docker.sock' '-v' '/home/runner:/home/runner' '-v' '/home/runner/work/_temp/_runner_file_commands/set_env_f7601054-475e-4bfd-b1e8-e2bffae847e9:/home/runner/work/_temp/_runner_file_commands/set_env_f7601054-475e-4bfd-b1e8-e2bffae847e9' '-v' '/home/runner/work/_temp/_runner_file_commands/set_output_f7601054-475e-4bfd-b1e8-e2bffae847e9:/home/runner/work/_temp/_runner_file_commands/set_output_f7601054-475e-4bfd-b1e8-e2bffae847e9' '-v' '/home/runner/work/_temp/_runner_file_commands/step_summary_f7601054-475e-4bfd-b1e8-e2bffae847e9:/home/runner/work/_temp/_runner_file_commands/step_summary_f7601054-475e-4bfd-b1e8-e2bffae847e9' '-v' '/home/runner/work/_temp/_runner_file_commands/add_path_f7601054-475e-4bfd-b1e8-e2bffae847e9:/home/runner/work/_temp/_runner_file_commands/add_path_f7601054-475e-4bfd-b1e8-e2bffae847e9' '-v' '/home/runner/work/Rapport_PFE/Rapport_PFE:/home/runner/work/Rapport_PFE/Rapport_PFE' '-v' '/home/runner/work/_actions/xu-cheng/latex-action/v3/entrypoint.sh:/entrypoint.sh' '-w' '/home/runner/work/Rapport_PFE/Rapport_PFE' '--entrypoint' '/entrypoint.sh' 'ghcr.io/xu-cheng/texlive-full:latest'
+'docker' 'run' '--rm' '-e' 'BIBINPUTS' '-e' 'BSTINPUTS' '-e' 'MFINPUTS' '-e' 'TEXINPUTS' '-e' 'TFMFONTS' '-e' 'HOME' '-e' 'INPUT_ROOT_FILE' '-e' 'INPUT_WORKING_DIRECTORY' '-e' 'INPUT_WORK_IN_ROOT_FILE_DIR' '-e' 'INPUT_CONTINUE_ON_ERROR' '-e' 'INPUT_COMPILER' '-e' 'INPUT_ARGS' '-e' 'INPUT_EXTRA_SYSTEM_PACKAGES' '-e' 'INPUT_EXTRA_FONTS' '-e' 'INPUT_PRE_COMPILE' '-e' 'INPUT_POST_COMPILE' '-e' 'INPUT_LATEXMK_SHELL_ESCAPE' '-e' 'INPUT_LATEXMK_USE_LUALATEX' '-e' 'INPUT_LATEXMK_USE_XELATEX' '-e' 'INPUT_TLMGR_REPO' '-e' 'GITHUB_JOB' '-e' 'GITHUB_REF' '-e' 'GITHUB_SHA' '-e' 'GITHUB_REPOSITORY' '-e' 'GITHUB_REPOSITORY_OWNER' '-e' 'GITHUB_REPOSITORY_OWNER_ID' '-e' 'GITHUB_RUN_ID' '-e' 'GITHUB_RUN_NUMBER' '-e' 'GITHUB_RETENTION_DAYS' '-e' 'GITHUB_RUN_ATTEMPT' '-e' 'GITHUB_REPOSITORY_ID' '-e' 'GITHUB_ACTOR_ID' '-e' 'GITHUB_ACTOR' '-e' 'GITHUB_TRIGGERING_ACTOR' '-e' 'GITHUB_WORKFLOW' '-e' 'GITHUB_HEAD_REF' '-e' 'GITHUB_BASE_REF' '-e' 'GITHUB_EVENT_NAME' '-e' 'GITHUB_SERVER_URL' '-e' 'GITHUB_API_URL' '-e' 'GITHUB_GRAPHQL_URL' '-e' 'GITHUB_REF_NAME' '-e' 'GITHUB_REF_PROTECTED' '-e' 'GITHUB_REF_TYPE' '-e' 'GITHUB_WORKFLOW_REF' '-e' 'GITHUB_WORKFLOW_SHA' '-e' 'GITHUB_WORKSPACE' '-e' 'GITHUB_ACTION' '-e' 'GITHUB_EVENT_PATH' '-e' 'GITHUB_ACTION_REPOSITORY' '-e' 'GITHUB_ACTION_REF' '-e' 'GITHUB_PATH' '-e' 'GITHUB_ENV' '-e' 'GITHUB_STEP_SUMMARY' '-e' 'GITHUB_STATE' '-e' 'GITHUB_OUTPUT' '-e' 'RUNNER_OS' '-e' 'RUNNER_ARCH' '-e' 'RUNNER_NAME' '-e' 'RUNNER_ENVIRONMENT' '-e' 'RUNNER_TOOL_CACHE' '-e' 'RUNNER_TEMP' '-e' 'RUNNER_WORKSPACE' '-e' 'ACTIONS_RUNTIME_URL' '-e' 'ACTIONS_RUNTIME_TOKEN' '-e' 'ACTIONS_CACHE_URL' '-e' 'GITHUB_ACTIONS=true' '-e' 'CI=true' '-v' '/var/run/docker.sock:/var/run/docker.sock' '-v' '/home/runner:/home/runner' '-v' '/home/runner/work/_temp/_runner_file_commands/set_env_ab72698b-5fc6-4e8a-bcee-b366009b837b:/home/runner/work/_temp/_runner_file_commands/set_env_ab72698b-5fc6-4e8a-bcee-b366009b837b' '-v' '/home/runner/work/_temp/_runner_file_commands/set_output_ab72698b-5fc6-4e8a-bcee-b366009b837b:/home/runner/work/_temp/_runner_file_commands/set_output_ab72698b-5fc6-4e8a-bcee-b366009b837b' '-v' '/home/runner/work/_temp/_runner_file_commands/step_summary_ab72698b-5fc6-4e8a-bcee-b366009b837b:/home/runner/work/_temp/_runner_file_commands/step_summary_ab72698b-5fc6-4e8a-bcee-b366009b837b' '-v' '/home/runner/work/_temp/_runner_file_commands/add_path_ab72698b-5fc6-4e8a-bcee-b366009b837b:/home/runner/work/_temp/_runner_file_commands/add_path_ab72698b-5fc6-4e8a-bcee-b366009b837b' '-v' '/home/runner/work/Rapport_PFE/Rapport_PFE:/home/runner/work/Rapport_PFE/Rapport_PFE' '-v' '/home/runner/work/_actions/xu-cheng/latex-action/v3/entrypoint.sh:/entrypoint.sh' '-w' '/home/runner/work/Rapport_PFE/Rapport_PFE' '--entrypoint' '/entrypoint.sh' 'ghcr.io/xu-cheng/texlive-full:latest'
 ::***::
 Unable to find image 'ghcr.io/xu-cheng/texlive-full:latest' locally
 latest: Pulling from xu-cheng/texlive-full
@@ -13,15 +13,14 @@ e5ce42e3a174: Pulling fs layer
 625510e6524c: Pulling fs layer
 58e7fd50b5ec: Waiting
 625510e6524c: Waiting
-b92772c95a16: Verifying Checksum
-b92772c95a16: Download complete
 e5ce42e3a174: Verifying Checksum
 e5ce42e3a174: Download complete
+b92772c95a16: Download complete
+58e7fd50b5ec: Verifying Checksum
+58e7fd50b5ec: Download complete
 1074353eec0d: Verifying Checksum
 1074353eec0d: Download complete
 1074353eec0d: Pull complete
-58e7fd50b5ec: Verifying Checksum
-58e7fd50b5ec: Download complete
 b92772c95a16: Pull complete
 e5ce42e3a174: Pull complete
 58e7fd50b5ec: Pull complete
@@ -55,23 +54,25 @@ L3 programming layer <2025-12-29>
  (/opt/texlive/texdir/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
 (/opt/texlive/texdir/texmf-dist/tex/latex/base/size12.clo))
-(/opt/texlive/texdir/texmf-dist/tex/latex/base/inputenc.sty
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (/opt/texlive/texdir/texmf-dist/tex/latex/base/fontenc.sty
-(/opt/texlive/texdir/texmf-dist/tex/latex/lm/t1lmr.fd))
-(/opt/texlive/texdir/texmf-dist/tex/generic/babel/babel.sty
-(/opt/texlive/texdir/texmf-dist/tex/generic/babel/luababel.def)
-(/opt/texlive/texdir/texmf-dist/tex/generic/babel/luababel.def)
-(/opt/texlive/texdir/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex)
-(/opt/texlive/texdir/texmf-dist/tex/generic/babel-french/french.ldf
-(/opt/texlive/texdir/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-fr.tex
-UTF-8 French hyphenation patterns
-(/opt/texlive/texdir/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-fr.tex)
-
-(/opt/texlive/texdir/texmf-dist/tex/generic/hyph-utf8/patterns/quote/hyph-quote
--fr.tex)))) (/opt/texlive/texdir/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/opt/texlive/texdir/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)))
+(/opt/texlive/texdir/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/base/fontenc.sty)
+(/opt/texlive/texdir/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/opt/texlive/texdir/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/opt/texlive/texdir/texmf-dist/tex/generic/iftex/iftex.sty)
+(/opt/texlive/texdir/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf))
+(/opt/texlive/texdir/texmf-dist/tex/latex/polyglossia/gloss-french.ldf)
+(/opt/texlive/texdir/texmf-dist/tex/latex/polyglossia/gloss-arabic.ldf
+(/opt/texlive/texdir/texmf-dist/tex/lualatex/luabidi/luabidi.sty
+(/opt/texlive/texdir/texmf-dist/tex/lualatex/luabidi/luabidi-footnotes.def))
+(/opt/texlive/texdir/texmf-dist/tex/latex/polyglossia/arabicnumbers.sty)
+(/opt/texlive/texdir/texmf-dist/tex/latex/polyglossia/hijrical.sty
+(/opt/texlive/texdir/texmf-dist/tex/latex/tools/calc.sty)
+(/opt/texlive/texdir/texmf-dist/tex/latex/polyglossia/cal-util.def)))
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics/graphicx.sty
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics/keyval.sty)
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics/graphics.sty
@@ -79,7 +80,6 @@ UTF-8 French hyphenation patterns
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics-def/luatex.def)))
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref.sty
-(/opt/texlive/texdir/texmf-dist/tex/generic/iftex/iftex.sty)
 (/opt/texlive/texdir/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
 (/opt/texlive/texdir/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
 (/opt/texlive/texdir/texmf-dist/tex/generic/pdfescape/pdfescape.sty
@@ -91,7 +91,6 @@ UTF-8 French hyphenation patterns
 (/opt/texlive/texdir/texmf-dist/tex/latex/refcount/refcount.sty)
 (/opt/texlive/texdir/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 (/opt/texlive/texdir/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
-(/opt/texlive/texdir/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
 (/opt/texlive/texdir/texmf-dist/tex/generic/stringenc/stringenc.sty)
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def)
 (/opt/texlive/texdir/texmf-dist/tex/generic/intcalc/intcalc.sty)
@@ -104,9 +103,7 @@ UTF-8 French hyphenation patterns
 (/opt/texlive/texdir/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
 (/opt/texlive/texdir/texmf-dist/tex/latex/geometry/geometry.sty
 (/opt/texlive/texdir/texmf-dist/tex/generic/iftex/ifvtex.sty))
-(/opt/texlive/texdir/texmf-dist/tex/latex/titlesec/titlesec.sty)
-(/opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)
-(./main.aux)
+(/opt/texlive/texdir/texmf-dist/tex/latex/titlesec/titlesec.sty) (./main.aux)
 (/opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/opt/texlive/texdir/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -123,1643 +120,18 @@ No file main.lof.
 No file main.lot.
 [3] (./frontmatter.tex
 
+LaTeX Font Warning: Font shape `TU/LatinModernRoman(0)/m/sc' undefined
+(Font)              using `TU/LatinModernRoman(0)/m/n' instead on input line 4.
+
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ذ (U+0630) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ث (U+062B) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ذ (U+0630) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ث (U+062B) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no ذ (U+0630) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no آ (U+0622) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ث (U+062B) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no إ (U+0625) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no إ (U+0625) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no ذ (U+0630) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no آ (U+0622) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ث (U+062B) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no إ (U+0625) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no إ (U+0625) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[4
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ذ (U+0630) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ث (U+062B) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no ذ (U+0630) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no آ (U+0622) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ج (U+062C) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ز (U+0632) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ث (U+062B) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no غ (U+063A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no إ (U+0625) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ش (U+0634) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no إ (U+0625) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ئ (U+0626) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ك (U+0643) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ح (U+062D) in font ec-lmr12!
-Missing character: There is no ن (U+0646) in font ec-lmr12!
-Missing character: There is no ظ (U+0638) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no خ (U+062E) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ص (U+0635) in font ec-lmr12!
-Missing character: There is no ة (U+0629) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no ف (U+0641) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no م (U+0645) in font ec-lmr12!
-Missing character: There is no س (U+0633) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ت (U+062A) in font ec-lmr12!
-Missing character: There is no ط (U+0637) in font ec-lmr12!
-Missing character: There is no ب (U+0628) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ق (U+0642) in font ec-lmr12!
-Missing character: There is no ع (U+0639) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ى (U+0649) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ل (U+0644) in font ec-lmr12!
-Missing character: There is no ه (U+0647) in font ec-lmr12!
-Missing character: There is no ا (U+0627) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-Missing character: There is no د (U+062F) in font ec-lmr12!
-Missing character: There is no و (U+0648) in font ec-lmr12!
-Missing character: There is no ي (U+064A) in font ec-lmr12!
-Missing character: There is no ر (U+0631) in font ec-lmr12!
-]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-) [5
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-] [6<./images/image1.jpeg>] [7<./images/image2.jpeg>] (./introduction.tex
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
+[4]) [5] [6<./images/image1.jpeg>] [7<./images/image2.jpeg>]
+(./introduction.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1769,617 +141,202 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[8
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-<./images/image3.jpeg>]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[9
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-<./images/image4.jpeg><./images/image5.jpeg>] [10<./images/image6.jpeg>]
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-) [11
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmbx12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-] (./chapter1.tex
+[8<./images/image3.jpeg>] [9<./images/image4.jpeg><./images/image5.jpeg>])
+[10<./images/image6.jpeg>] (./chapter1.tex
 Chapitre 1.
 
-Overfull \hbox (20.09898pt too wide) in paragraph at lines 4--5
-[]\T1/lmr/bx/n/17.28 Ré-seaux VA-NET et spé-ci-fi-ca-tion des mes-sages SAE
- J2735 
+Overfull \hbox (20.47374pt too wide) in paragraph at lines 4--5
+[]\TU/LatinModernRoman(0)/b/n/17.28 Ré-seaux VA-NET et spé-ci-fi-ca-tion des 
+mes-sages SAE J2735 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 7.
 
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ​ (U+200B) in font ec-lmr12!
-Missing character: There is no ​ (U+200B) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no … (U+2026) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ​ (U+200B) in font ec-lmr12!
-Missing character: There is no ​ (U+200B) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no … (U+2026) in font ec-lmr12!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[12
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ​ (U+200B) in font ec-lmr12!
-Missing character: There is no ​ (U+200B) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no … (U+2026) in font ec-lmr12!
+[11] [12<./images/image7.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (27.8315pt too wide) in paragraph at lines 75--76
+[]\TU/LatinModernRoman(0)/m/sc/12 IEEE 1609.4 dé-crit les opé-ra-tions de ra
+-dio sans fil mul-ti-ca-naux qui uti-lise la norme IEEE 802.11p,
+[13<./images/image8.png>] [14<./images/image9.png>] [15]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16] [17<./images/image10.jpeg>] [18<./images/image11.jpeg>]
+Overfull \hbox (1603.87225pt too wide) in paragraph at lines 281--293
+ [][] 
+[19] [20]
+Overfull \hbox (51.7195pt too wide) in paragraph at lines 415--434
+ [][] 
+[21]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (61.05548pt too wide) in paragraph at lines 494--513
+ [][] 
+[22<./images/image12.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [23<./images/image13.png>] [24] (./chapter2.tex
+Chapitre 2.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 7.
+
+[25]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26] [27<./images/image15.jpeg>]
+Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+
+Overfull \hbox (200.93959pt too wide) in paragraph at lines 145--154
+ [][] 
+
+Overfull \hbox (1.99144pt too wide) in paragraph at lines 156--157
+[]\TU/LatinModernRoman(0)/m/sc/12 Le seul al-go-rithme de ha-chage ap-prou-vé 
+pour l’uti-li-sa-tion dans la pré-sente norme IEEE1609.2
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28
+Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+<./images/image16.png>]
+Missing character: There is no ≡ (U+2261) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≡ (U+2261) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≡ (U+2261) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≡ (U+2261) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29
+Missing character: There is no ≡ (U+2261) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≡ (U+2261) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
 ]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[13
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no • (U+2022) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-<./images/image7.png>]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-
-Overfull \hbox (27.78435pt too wide) in paragraph at lines 75--76
-[]\T1/lmr/m/n/12 IEEE 1609.4 dé-crit les opé-ra-tions de ra-dio sans fil mul
--ti-ca-naux qui uti-lise la norme IEEE 802.11p,
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[14
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-<./images/image8.png>]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[15
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-<./images/image9.png>]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[16
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[17
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-[18
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no œ (U+0153) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-<./images/image10.jpeg>]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-[19
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no — (U+2014) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no – (U+2013) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-<./images/image11.jpeg>]
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-Missing character: There is no ’ (U+2019) in font ec-lmr12!
-./chapter1.tex:282: Undefined control sequence.
-l.282 \hlineFlow
-                 des évènements &  &  &  &  &  \\
- 13279 words of node memory still in use:
-   25 hlist, 8 rule, 99 disc, 7 local_par, 5 dir, 301 glue, 45 kern, 20 penalty
-, 1005 glyph, 6 align_record, 593 attribute, 161 glue_spec, 120 attribute_list,
- 9 temp, 1 align_stack, 3 if_stack, 3 write, 1 pdf_dest nodes
-   avail lists: 2:302,3:123,4:39,5:280,6:58,7:7040,8:2,9:183,10:26,11:662
-./chapter1.tex:282:  ==> Fatal error occurred, no output PDF file produced!
+[30<./images/image17.jpeg><./images/image18.jpeg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [31] [32] (./chapter3.tex
+Chapitre 3.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 92.
+
+[34<./images/image19.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35]) [36<./images/image20.png>] [37<./images/image21.png><./images/image22.png
+>] [38<./images/image23.png><./images/image24.png>] [39<./images/image25.png>]
+(./chapter4.tex
+Chapitre 4.
+[40<./images/image26.png>] [41<./images/image27.png><./images/image28.png>]
+Missing character: There is no ≤ (U+2264) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≤ (U+2264) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≤ (U+2264) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≤ (U+2264) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42
+Missing character: There is no ≤ (U+2264) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+Missing character: There is no ≤ (U+2264) in font "name:Latin Modern Roman:mo
+de=harf;script=latn;language=dflt;+tlig;"!
+<./images/image29.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43<./images/image30.png><./images/image31.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+./chapter4.tex:215: Undefined control sequence.
+<recently read> \hlineStart 
+                            
+l.215 \hlineStart
+                 \_count & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & X \\
+ 22707 words of node memory still in use:
+   190 hlist, 15 vlist, 145 rule, 51 disc, 12 local_par, 5 dir, 2 math, 1003 gl
+ue, 42 kern, 47 penalty, 13 unset, 1101 glyph, 12 align_record, 993 attribute, 
+73 glue_spec, 498 attribute_list, 9 temp, 1 align_stack, 3 if_stack, 7 write, 7
+ pdf_dest, 6 pdf_setmatrix, 6 pdf_save, 6 pdf_restore nodes
+   avail lists: 1:1,2:86,3:109,4:40,5:359,6:63,7:7059,8:4,9:243,10:29,11:753
+./chapter4.tex:215:  ==> Fatal error occurred, no output PDF file produced!
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
@@ -2391,25 +348,25 @@ Latexmk: Missing input file 'main.lof' message in .log file:
 Latexmk: Missing input file 'main.lot' message in .log file:
   No file main.lot.
 Latexmk: Using bibtex to make bibliography file(s).
-Latexmk: ====Undefined refs and citations with line #s in .tex file:
 Latexmk: Summary of warnings from last run of *latex:
-  Missing character: There is no ’ (U+2019) in font ec-lmr12!
-  Missing character: There is no ’ (U+2019) in font ec-lmr12!
-  Missing character: There is no ’ (U+2019) in font ec-lmr12!
-  Missing character: There is no ’ (U+2019) in font ec-lmr12!
-  Missing character: There is no ’ (U+2019) in font ec-lmr12!
-  Missing character: There is no ’ (U+2019) in font ec-lmr12!
-  Missing character: There is no ’ (U+2019) in font ec-lmr12!
- And 2176 more --- see log file 'main.log'
+Latexmk: ====Undefined refs and citations with line #s in .tex file:
+  Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mod
+  Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mode=harf;script=latn;language=dflt;+tlig;"!
+  Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mod
+  Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mode=harf;script=latn;language=dflt;+tlig;"!
+  Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mod
+  Missing character: There is no ≠ (U+2260) in font "name:Latin Modern Roman:mode=harf;script=latn;language=dflt;+tlig;"!
+  Missing character: There is no ≡ (U+2261) in font "name:Latin Modern Roman:mod
+ And 23 more --- see log file 'main.log'
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: Errors, so I did not complete making targets
 Latexmk: Sometimes, the -f option can be used to get latexmk
   to try to force complete processing.
   But normally, you will need to correct the file(s) that caused the
   error, and then rerun latexmk.
   In some cases, it is best to clean out generated files before rerunning
   latexmk after you've corrected the files.
-  =====Latex reported missing or unavailable character(s).
-=====See log file for details.
-Latexmk: Errors, so I did not complete making targets
 Collected error summary (may duplicate other messages):
   lualatex: Command for 'lualatex' gave return code 1
       Refer to 'main.log' and/or above output for details

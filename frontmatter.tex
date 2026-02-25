@@ -1,132 +1,119 @@
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{images/image1.jpeg}
-\caption{Image extracted}
-\end{figure}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{images/image2.jpeg}
-\caption{Image extracted}
-\end{figure}
+\begin{titlepage}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/image1.jpeg}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/image2.jpeg}
+    \end{minipage}
+    
+    \vspace{2cm}
+    
+    {\Large \textbf{Mémoire de Projet de Fin d’Études}}\\[0.5cm]
+    
+    Présenté en vue de l’obtention du\\[0.5cm]
+    
+    {\Large \textbf{Diplôme National d’Ingénieur en Sciences Appliquées et Technologie}}\\[0.5cm]
+    
+    \textbf{Spécialité :} Électronique : Microélectronique
+    
+    \vspace{2cm}
+    
+    Réalisé par\\[0.5cm]
+    {\Large \textbf{Ben Hassen Mahdi}}
+    
+    \vspace{1.5cm}
+    
+    {\LARGE \textbf{Implémentation de l’algorithme de hachage sécurisé pour VANET sur FPGA}}
+    
+    \vspace{2cm}
+    
+    Soutenu le 30/06/2014 devant le jury composé de :
+    
+    \vspace{1cm}
+    
+    \begin{tabular}{ll}
+        \textbf{Président :} & Mr. BOUBAKER Mohamed \\
+        \textbf{Membre :} & Mr. DOUSS Skander \\
+        \textbf{Encadrant :} & Mr. BEN DHAOU Imed \\
+    \end{tabular}
+    
+    \vfill
+\end{titlepage}
 
-
-Mémoire de Projet de Fin d’Études
-
-Présenté en vue de l’obtention du
-
-Diplôme National d’Ingénieur en Sciences Appliquées et Technologie 
-
-Spécialité :
-
-Électronique : Microélectronique
-
-  Réalisé par
-
-Ben Hassen Mahdi
-
-Implémentation de l’algorithme de hachage sécurisé pour VANET sur FPGA
-
-Soutenu le 30/06/2014 devant le jury  composé de :
-
-                                                                                              Président: Mr. BOUBAKER Mohamed
-
-                                                                                          Membre: Mr. DOUSS Skander
-
-                                                                                                 Encadrant: Mr. BEN DHAOU Imed
-
-Résumé
-
-  La communication dédiée à courte portée (DSRC) est un nouveau standard pour les systèmes de transport intelligents. Ce standard est une communication centrée sur les échangements des messages, où les messages sont envoyés entre les véhicules (V2V) ou de véhicule à une infrastructure (V2I). La norme prend en charge un fort algorithme cryptographique utilisant courbe elliptique. Ce travail vise à mettre en œuvre l’algorithme de hachage sécurisé (SHA-256) en utilisant FPGA. À partir de la description C++ de l’algorithme SHA-256, nous présentons plusieurs techniques de transformation de haut niveau pour obtenir une architecture à grande vitesse. Nous présentons une comparaison entre notre approche et l’architecture obtenue à l’aide d’outil de synthèse de haut niveau (GAUTT). L’architecture optimisée est codée en utilisant le langage VHDL synthétisable. L’architecture est testée en utilisant un message de sécurité typique connu sous le nom d’un message de freinage d’urgence. Les résultats de synthèse montrent que notre architecture proposée peut être cadencée à 130MHz et consomme 923 cellules.
-
-Mots-clés : VANET, DSRC, SAE 2735, IEEE 1609.2, ECDSA, SHA-2, Implémentation hardware de SHA-256, FPGA, DSP, Synthèse haut-niveau.
-
-Abstract
-
-  Dedicated short range communication (DSRC) is a new standard for intelligent transportation systems. The standard is a message centric communication, where messages are sent between vehicles (V2V) or from vehicle to infrastructure (V2I). The standard supports strong cryptographic algorithm using elliptic curve. This work aims to implement secure hash algorithm (SHA-256) using FPGA. Starting from the C++ description of the SHA-256 algorithm, we present several high-level transformation techniques to derive high speed architecture. We present a comparison between our approach and the architecture obtained using high-level synthesis tool (GAUTT).  The optimized architecture is coded using synthesizable VHDL. The architecture is tested using a typical security message known as an emergency braking message. The synthesis results show that our proposed architecture can be clocked at 140MHz and consumes 923 slices.
-
-Keywords: VANET, DSRC, SAE 2735, IEEE 1609.2, ECDSA, SHA-256, Hardware implementation of SHA-256, FPGA, DSP, High-Level-Synthesis.
-
-\begin{Arabic}
-ملخص
-
-نظام اتصالات قصير المدى المخصصة هو معيار جديد لنظم النقل الذكي. يعتمد النظام على تبادل الرسائل بين المركبات او بين المركبة و الوحدة على جانب الطريق.  يعتمد النظام على طريقة التعمية الحديثة. 
-
-  يهدف هذا العمل لتشغيل خوارزمية التجزئة الآمنة على مصفوفات البوابات المنطقية القابلة للبرمجة في الميدان. بداية من توصيف الخوارزمية باستعمال لغة س++, قمنا  بالعديد من التحويلات عالية المستوى لاشتقاق معمارية سريعة. من ثم وصفنا المعمارية باستعمال لغة توصيف العتاد في إتش دي إل  و اختبرنا المعمارية باستعمال  رسالة الكبح في حالات الطوارئ.
-
-: الكلمات المفاتيح
-
-VANET, نظام اتصالات قصير المدى المخصصة(DSRC), SAE 2735, IEEE 1609.2, ECDSA,SHA2, التوليف رفيع المستوى., DSP, FPGA ,التطبيق على الهاردوير SHA-256,
-\end{Arabic}
-
-Table des matières
-
-Liste des figures
-
-Liste des tableaux
-
-Dédicace
+\chapter*{Dédicace}
+\addcontentsline{toc}{chapter}{Dédicace}
 
 À ma mère, qui m’a comblé de son soutien et m’a voué un amour inconditionnel. Tu es pour moi un exemple de courage et de sacrifice continu.
 
 Que cet humble travail témoigne mon affection, mon éternel attachement et qu’il appelle sur moi ta continuelle bénédiction.
 
-Remerciements
+\chapter*{Remerciements}
+\addcontentsline{toc}{chapter}{Remerciements}
 
- J’adresse mes remerciements aux personnes qui m’ont aidé dans la réalisation de ce projet de fin d’études.
+J’adresse mes remerciements aux personnes qui m’ont aidé dans la réalisation de ce projet de fin d’études.
 
-  En premier lieu, je remercie M. Ben Dhaou Imed. En tant que l’encadreur de mon projet de fin d’études, il m’a guidé dans mon travail et m’a aidé à trouver des solutions pour avancer.
+En premier lieu, je remercie M. Ben Dhaou Imed. En tant que l’encadreur de mon projet de fin d’études, il m’a guidé dans mon travail et m’a aidé à trouver des solutions pour avancer.
 
-  Je remercie aussi mes amis qui ont contribué par leurs nombreuses remarques et suggestions à améliorer la qualité de ce mémoire, et je leur en suis très reconnaissant.
+Je remercie aussi mes amis qui ont contribué par leurs nombreuses remarques et suggestions à améliorer la qualité de ce mémoire, et je leur en suis très reconnaissant.
 
-Abréviations
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
 
-ASN.1: Abstract Syntax Notation one
+La communication dédiée à courte portée (DSRC) est un nouveau standard pour les systèmes de transport intelligents. Ce standard est une communication centrée sur les échangements des messages, où les messages sont envoyés entre les véhicules (V2V) ou de véhicule à une infrastructure (V2I). La norme prend en charge un fort algorithme cryptographique utilisant courbe elliptique. Ce travail vise à mettre en œuvre l’algorithme de hachage sécurisé (SHA-256) en utilisant FPGA. À partir de la description C++ de l’algorithme SHA-256, nous présentons plusieurs techniques de transformation de haut niveau pour obtenir une architecture à grande vitesse. Nous présentons une comparaison entre notre approche et l’architecture obtenue à l’aide d’outil de synthèse de haut niveau (GAUTT). L’architecture optimisée est codée en utilisant le langage VHDL synthétisable. L’architecture est testée en utilisant un message de sécurité typique connu sous le nom d’un message de freinage d’urgence. Les résultats de synthèse montrent que notre architecture proposée peut être cadencée à 130MHz et consomme 923 cellules.
 
-BSM: Basic Safety Message
+\textbf{Mots-clés :} VANET, DSRC, SAE 2735, IEEE 1609.2, ECDSA, SHA-2, Implémentation hardware de SHA-256, FPGA, DSP, Synthèse haut-niveau.
 
-BLOB: binary large object
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 
-BER: Basic Encoding Rules (règles d’encodage basique)
+Dedicated short range communication (DSRC) is a new standard for intelligent transportation systems. The standard is a message centric communication, where messages are sent between vehicles (V2V) or from vehicle to infrastructure (V2I). The standard supports strong cryptographic algorithm using elliptic curve. This work aims to implement secure hash algorithm (SHA-256) using FPGA. Starting from the C++ description of the SHA-256 algorithm, we present several high-level transformation techniques to derive high speed architecture. We present a comparison between our approach and the architecture obtained using high-level synthesis tool (GAUTT). The optimized architecture is coded using synthesizable VHDL. The architecture is tested using a typical security message known as an emergency braking message. The synthesis results show that our proposed architecture can be clocked at 140MHz and consumes 923 slices.
 
-DSRC: Dedicated Short Range Communication
+\textbf{Keywords:} VANET, DSRC, SAE 2735, IEEE 1609.2, ECDSA, SHA-256, Hardware implementation of SHA-256, FPGA, DSP, High-Level-Synthesis.
 
-DFG: Data Flow Graph
+\chapter*{\textarabic{ملخص}}
+\addcontentsline{toc}{chapter}{ملخص}
 
-ECDSA: Elliptic Curve Digital Signature Algorithm
+\begin{Arabic}
+نظام اتصالات قصير المدى المخصصة هو معيار جديد لنظم النقل الذكي. يعتمد النظام على تبادل الرسائل بين المركبات او بين المركبة و الوحدة على جانب الطريق. يعتمد النظام على طريقة التعمية الحديثة.
 
-ETSI: European Telecommunications Standards Institute
+يهدف هذا العمل لتشغيل خوارزمية التجزئة الآمنة على مصفوفات البوابات المنطقية القابلة للبرمجة في الميدان. بداية من توصيف الخوارزمية باستعمال لغة س++, قمنا بالعديد من التحويلات عالية المستوى لاشتقاق معمارية سريعة. من ثم وصفنا المعمارية باستعمال لغة توصيف العتاد في إتش دي إل واختبرنا المعمارية باستعمال رسالة الكبح في حالات الطوارئ.
 
-FCC: Federal Communications Commission
+\textbf{: الكلمات المفاتيح}
 
-FPGA: Field Programmable Gate Array
+VANET, نظام اتصالات قصير المدى المخصصة(DSRC), SAE 2735, IEEE 1609.2, ECDSA,SHA2, التوليف رفيع المستوى., DSP, FPGA ,التطبيق على الهاردوير SHA-256,
+\end{Arabic}
 
-HLS: High Level Synthesis
+\chapter*{Abréviations}
+\addcontentsline{toc}{chapter}{Abréviations}
 
-ITS: intelligent transportation systems
-
-MANET: Metropolitan Ad Hoc Networks
-
-OBE:  On-board equipment (DSRC equipment connected directly to  a vehicle databus)
-
-OSI: Open Systems Interconnection
-
-OBD: On Board Diagnostic
-
-PDU: protocol data unit
-
-RSE: RoadSide Equipment
-
-RSU: Roadside Unit
-
-SAE: Society of Automotive Engineers
-
-SHA: Secure Hash Algorithm
-
-V2I: Vehicle to Infrastructure Communication
-
-V2V: Vehicle to Vehicle Communication
-
-VANETs: Vehicular Ad Hoc Networks
-
-WAVE: Wireless Access in Vehicular Environments
-
+\begin{description}[style=multiline, leftmargin=3cm, font=\bfseries]
+    \item[ASN.1] Abstract Syntax Notation one
+    \item[BSM] Basic Safety Message
+    \item[BLOB] binary large object
+    \item[BER] Basic Encoding Rules (règles d’encodage basique)
+    \item[DSRC] Dedicated Short Range Communication
+    \item[DFG] Data Flow Graph
+    \item[ECDSA] Elliptic Curve Digital Signature Algorithm
+    \item[ETSI] European Telecommunications Standards Institute
+    \item[FCC] Federal Communications Commission
+    \item[FPGA] Field Programmable Gate Array
+    \item[HLS] High Level Synthesis
+    \item[ITS] intelligent transportation systems
+    \item[MANET] Metropolitan Ad Hoc Networks
+    \item[OBE] On-board equipment (DSRC equipment connected directly to a vehicle databus)
+    \item[OSI] Open Systems Interconnection
+    \item[OBD] On Board Diagnostic
+    \item[PDU] protocol data unit
+    \item[RSE] RoadSide Equipment
+    \item[RSU] Roadside Unit
+    \item[SAE] Society of Automotive Engineers
+    \item[SHA] Secure Hash Algorithm
+    \item[V2I] Vehicle to Infrastructure Communication
+    \item[V2V] Vehicle to Vehicle Communication
+    \item[VANETs] Vehicular Ad Hoc Networks
+    \item[WAVE] Wireless Access in Vehicular Environments
+\end{description}

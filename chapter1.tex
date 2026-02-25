@@ -7,11 +7,11 @@
 \subsection{Introduction}
   Le réseau inter-véhiculaire VANET est spécifié dans une série de normes, y compris celles générées par le groupe de travail IEEE P1609. Cette connectivité permet une gamme d’applications qui s’appuient sur les communications entre les usagers de la route, y compris la sécurité des véhicules, le service public, la gestion de la flotte commerciale, péage électronique, et d’autres opérations [4].
 
-Notion de VANET et applications
+\section{Notion de VANET et applications}
 
- Notion de VANET
+\subsection{Notion de VANET}
 
-  VANET (Vehicular Ad-hocal Networks), est une forme de  (réseau mobile Ad-hoc), qui fournir des communications au sein d’un groupe de véhicules à portée les uns des autres et entre les véhicules et les équipements fixes à portée (équipements de la route RSU : Road Side Unit). VANET utilise les voitures comme des nœuds mobiles dans un MANET pour créer un réseau mobile. Un VANET transforme chaque voiture participante à un routeur ou un nœud sans fil. Il permet aux voitures à distance, environ de 100 à 300 mètres, de se connecter les uns des autres et de créer un réseau avec une large gamme. Si les voitures tombent hors de la portée du signal et de restitution hors du réseau, d’autres véhicules peuvent se joindre comme des véhicules de liaison les uns aux autres de telle sorte qu’un Internet mobile est créé. On estime que les premiers systèmes qui intègreront cette technologie sont la police et les véhicules d’incendie, elle les permette de communiquer les uns avec les autres pour des raisons de sécurités [5].
+VANET (Vehicular Ad-hocal Networks), est une forme de (réseau mobile Ad-hoc), qui fournir des communications au sein d’un groupe de véhicules à portée les uns des autres et entre les véhicules et les équipements fixes à portée (équipements de la route RSU : Road Side Unit). VANET utilise les voitures comme des nœuds mobiles dans un MANET pour créer un réseau mobile. Un VANET transforme chaque voiture participante à un routeur ou un nœud sans fil. Il permet aux voitures à distance, environ de 100 à 300 mètres, de se connecter les uns des autres et de créer un réseau avec une large gamme. Si les voitures tombent hors de la portée du signal et de restitution hors du réseau, d’autres véhicules peuvent se joindre comme des véhicules de liaison les uns aux autres de telle sorte qu’un Internet mobile est créé. On estime que les premiers systèmes qui intègreront cette technologie sont la police et les véhicules d’incendie, elle les permette de communiquer les uns avec les autres pour des raisons de sécurités [5].
 
 \begin{figure}[h]
 \centering
@@ -39,19 +39,33 @@ Cet exemple présente la réponse des composantes de réseau VANET au cas d’ur
 
 Figure 1.2: Exemple d’applications pour VANET
 
-D’autres applications possibles sont :
+D’autres applications possibles sont :
 
-• Système d’alerte d’urgence pour les véhicules.• Contrôle coopératif de la vitesse de croisière des véhicules.• Alerte aux collisions.• Évitement des collisions d’intersection.• Avertissement d’approche des véhicules d’urgence (Blue Waves).• Inspection de sécurité des véhicules.• Transi ou de priorité de signal de véhicule d’urgence.• Dédouanement et inspections de sécurité des véhicules commerciaux• Signature en – véhicule.• Avertissement en cas de retournement.• Sonde de collecte de données (OBD).• Avertissement d’intersection route – rail.• Paiements électroniques de stationnement (Télépéage) [6].
+\begin{itemize}
+    \item Système d’alerte d’urgence pour les véhicules.
+    \item Contrôle coopératif de la vitesse de croisière des véhicules.
+    \item Alerte aux collisions.
+    \item Évitement des collisions d’intersection.
+    \item Avertissement d’approche des véhicules d’urgence (Blue Waves).
+    \item Inspection de sécurité des véhicules.
+    \item Transi ou de priorité de signal de véhicule d’urgence.
+    \item Dédouanement et inspections de sécurité des véhicules commerciaux
+    \item Signature en – véhicule.
+    \item Avertissement en cas de retournement.
+    \item Sonde de collecte de données (OBD).
+    \item Avertissement d’intersection route – rail.
+    \item Paiements électroniques de stationnement (Télépéage) [6].
+\end{itemize}
 
-Les Communications dédiées à courte portée (DSRC)
+\section{Les Communications dédiées à courte portée (DSRC)}
 
-Le concept de base de DSRC
+\subsection{Le concept de base de DSRC}
 
-  Les Communications dédiées à courte portée (DSRC: Dedicated short-range communications) sont à sens unique ou bidirectionnel à courte portée. Ils sont spécialement conçus pour des canaux de communication sans fil de moyenne portée, l’industrie automobile et un ensemble correspondant de protocoles et de normes.
+Les Communications dédiées à courte portée (DSRC: Dedicated short-range communications) sont à sens unique ou bidirectionnel à courte portée. Ils sont spécialement conçus pour des canaux de communication sans fil de moyenne portée, l’industrie automobile et un ensemble correspondant de protocoles et de normes.
 
-En octobre 1999, la Federal Communications Commission des États-Unis (FCC) a alloué 75 MHz de spectre dans la bande 5,9 GHz pour être utilisé par les systèmes de transport intelligents (STI). En aout 2008, l’Institut des normes européennes de télécommunication (ETSI) a alloué 30 MHz de spectre dans la bande 5,9 GHz pour les STI.  En 2003, il a été utilisé en Europe et au Japon dans le télépéage. Les systèmes DSRC en Europe, au Japon et aux États-Unis ne sont pas compatibles et comprennent des variations très importantes (5,8 GHz, 5,9 GHz ou même à infrarouge), différentes vitesses de transmission, et de différents protocoles.[7][8][9].
+En octobre 1999, la Federal Communications Commission des États-Unis (FCC) a alloué 75 MHz de spectre dans la bande 5,9 GHz pour être utilisé par les systèmes de transport intelligents (STI). En aout 2008, l’Institut des normes européennes de télécommunication (ETSI) a alloué 30 MHz de spectre dans la bande 5,9 GHz pour les STI. En 2003, il a été utilisé en Europe et au Japon dans le télépéage. Les systèmes DSRC en Europe, au Japon et aux États-Unis ne sont pas compatibles et comprennent des variations très importantes (5,8 GHz, 5,9 GHz ou même à infrarouge), différentes vitesses de transmission, et de différents protocoles.[7][8][9].
 
-Les couches de protocoles utilisés dans la communication DSRC
+\subsection{Les couches de protocoles utilisés dans la communication DSRC}
 
   Dans le contexte des réseaux VANET, la couche physique est formée par la commande radio qui est conforme à la norme IEEE 802.11p et est inhérente à l’OBE et RSE. La série IEEE 1609.x est spécifiée l’accès sans fil dans des environnements véhiculaires. Il se rassembler en couche de normes comme les couches du modèle OSI et contient une architecture globale du système DSRC/WAVE.
 
@@ -84,11 +98,11 @@ SAE J2735 occupe les couches d’application et présentation du modèle OSI, ca
 
   SAE J2735 (DSRC message Set), définit également un message de sécurité de base Basic Safety Message appelé message de battement de cœur, car il est envoyé environ toutes les 10 millisecondes. Basic Safety Message est diffusé à tous les véhicules environnants, et contient des données qui peuvent être utilisées pour des raisons de sécurité [10].
 
-Les services de sécurités
+\section{Les services de sécurités}
 
-  Dans la norme IEEE1609.2, on retrouve les services de sécurité pour la couche réseau de WAVE et pour les applications destinées à fonctionner sur la couche. Ces mécanismes sont prévus pour authentifier les messages de gestion de WAVE, pour authentifier les messages qui ne nécessitant pas d’anonymat, et pour crypter les messages à un destinataire connus. Les services comprennent le cryptage en utilisant la clé publique d’un autre parti et l’authentification non anonyme. La confidentialité (cryptage d’un message pour un destinataire spécifique) permet d’éviter l’interception ou la modification d’un message. L’authenticité (confirmation de l’origine du message) et l’intégrité (confirmation que le message n’a pas été modifié en transit) évitée incitante un destinataire à accepter le contenu des messages incorrects. L’anonymat des utilisateurs finaux est également une exigence. Des mécanismes cryptographiques fournissent la plupart de ces exigences de sécurité, et de leurs trois grandes familles qui sont : clé secrète ou algorithmes symétriques, les algorithmes à clé publique ou asymétrique, et des fonctions de hachage (Hash algorithm).
+Dans la norme IEEE1609.2, on retrouve les services de sécurité pour la couche réseau de WAVE et pour les applications destinées à fonctionner sur la couche. Ces mécanismes sont prévus pour authentifier les messages de gestion de WAVE, pour authentifier les messages qui ne nécessitant pas d’anonymat, et pour crypter les messages à un destinataire connus. Les services comprennent le cryptage en utilisant la clé publique d’un autre parti et l’authentification non anonyme. La confidentialité (cryptage d’un message pour un destinataire spécifique) permet d’éviter l’interception ou la modification d’un message. L’authenticité (confirmation de l’origine du message) et l’intégrité (confirmation que le message n’a pas été modifié en transit) évitée incitante un destinataire à accepter le contenu des messages incorrects. L’anonymat des utilisateurs finaux est également une exigence. Des mécanismes cryptographiques fournissent la plupart de ces exigences de sécurité, et de leurs trois grandes familles qui sont : clé secrète ou algorithmes symétriques, les algorithmes à clé publique ou asymétrique, et des fonctions de hachage (Hash algorithm).
 
-SAE J2735 DSRC Message Set
+\section{SAE J2735 DSRC Message Set}
 
   Au sommet de la pile de protocoles, la couche application comprend des processus d’application et des protocoles additionnels qui fournissent un soutien direct aux applications. Un exemple de ce dernier est le dictionnaire de jeu de messages J2735 (Message Set Dictionary). Il définit des messages qui permettent un ensemble de quinze collectivement d’applications DSRC de base. SAE J2735 définit le format de chacun des types de messages DSRC. Chaque message est défini comme un ensemble de structures de données appelées constitutives des éléments de données (Data Element) et des trames de données (Data Frame). Un élément de données (Data Element) est une structure de données la plus fondamentale dans la norme J2735. Une trame de données (Data Frame) est une structure de données plus complexe, composée d’un ou plusieurs éléments de données ou d’autres trames de données. La norme J2735 définit la syntaxe (longueur, format) et la sémantique de chaque élément de données et trame de données.
 
